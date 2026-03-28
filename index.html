@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JIN Studio — Digital Agency</title>
+  <meta name="description" content="JIN Studio — We transform your vision into stunning web and mobile experiences." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ─── LOADER ─────────────────────────────────────────────────── -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">JIN<span>.</span></div>
+      <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+      <p class="loader-sub">Crafting something wonderful</p>
+    </div>
+  </div>
+
+  <!-- ─── CURSOR ─────────────────────────────────────────────────── -->
+  <div id="cursor-dot" class="cursor-dot"></div>
+  <div id="cursor-ring" class="cursor-ring"></div>
+
+  <!-- ─── SCROLL PROGRESS ────────────────────────────────────────── -->
+  <div id="scroll-progress" class="scroll-progress"></div>
+
+  <!-- ─── NAVBAR ─────────────────────────────────────────────────── -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">JIN<span class="logo-dot">.</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Work</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <a href="#contact" class="btn btn-primary nav-cta mag-btn">Let's Talk</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── MOBILE MENU ─────────────────────────────────────────────── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#projects" class="mobile-link">Work</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="#contact" class="btn btn-primary" style="margin-top:1rem;">Let's Talk</a>
+  </div>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════════════════════════════ -->
+    <section id="hero" class="hero">
+      <canvas id="particleCanvas"></canvas>
+      <div class="hero-glow glow-1"></div>
+      <div class="hero-glow glow-2"></div>
+
+      <div class="hero-container">
+        <!-- Left Column -->
+        <div class="hero-text reveal-up">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Available for new projects
+          </div>
+          <h1 class="hero-title">
+            Engineering<br />
+            <span class="hero-cycle-wrapper">
+              <span id="cycleText" class="gradient-text cycle-text">Joyful</span>
+            </span><br />
+            Digital Experiences.
+          </h1>
+          <p class="hero-desc">
+            We build beautiful, high-performance web and mobile applications that
+            <strong>elevate your brand</strong> and drive actual business growth.
+            From solo craftsmanship to full-service studio.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary btn-lg mag-btn">
+              Start Your Project
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#services" class="btn btn-ghost btn-lg">View Our Services</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-num counter" data-target="100">0</span><span class="hero-stat-suffix">+</span>
+              <p>Projects</p>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-num counter" data-target="99">0</span><span class="hero-stat-suffix">%</span>
+              <p>Satisfaction</p>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-num counter" data-target="7">0</span><span class="hero-stat-suffix">+</span>
+              <p>Years Exp.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual -->
+        <div class="hero-visual reveal-right">
+          <div class="visual-wrap">
+            <!-- Gradient orbs -->
+            <div class="orb orb-purple"></div>
+            <div class="orb orb-blue"></div>
+            <div class="orb orb-pink"></div>
+
+            <!-- Hero portrait -->
+            <div class="hero-photo-wrap">
+              <img src="images/me.jpg" alt="Jin Henry" class="hero-photo-img" />
+              <div class="hero-photo-glow"></div>
+            </div>
+
+            <!-- Floating cards -->
+            <div class="float-card fc-1">
+              <div class="fc-icon">⚡</div>
+              <div class="fc-info">
+                <p class="fc-label">Performance</p>
+                <p class="fc-val">99 / 100</p>
+              </div>
+            </div>
+            <div class="float-card fc-2">
+              <div class="fc-icon">🎨</div>
+              <div class="fc-info">
+                <p class="fc-label">Design Score</p>
+                <p class="fc-val">A+</p>
+              </div>
+            </div>
+            <div class="float-card fc-3">
+              <div class="fc-icon">📱</div>
+              <div class="fc-info">
+                <p class="fc-label">Mobile Ready</p>
+                <p class="fc-val">100%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-hint">
+        <div class="scroll-dot-wrap"><div class="scroll-dot-inner"></div></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ─── MARQUEE STRIP ─────────────────────────────────────────── -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-track">
+        <span>React</span><span aria-hidden="true">·</span>
+        <span>Next.js</span><span aria-hidden="true">·</span>
+        <span>React Native</span><span aria-hidden="true">·</span>
+        <span>Flutter</span><span aria-hidden="true">·</span>
+        <span>Node.js</span><span aria-hidden="true">·</span>
+        <span>TypeScript</span><span aria-hidden="true">·</span>
+        <span>Figma</span><span aria-hidden="true">·</span>
+        <span>AWS</span><span aria-hidden="true">·</span>
+        <span>MongoDB</span><span aria-hidden="true">·</span>
+        <span>PostgreSQL</span><span aria-hidden="true">·</span>
+        <span>Vue.js</span><span aria-hidden="true">·</span>
+        <span>Python</span><span aria-hidden="true">·</span>
+        <span>Ruby on Rails</span><span aria-hidden="true">·</span>
+        <span>Ruby</span><span aria-hidden="true">·</span>
+        <span>Docker</span><span aria-hidden="true">·</span>
+        <span>GraphQL</span><span aria-hidden="true">·</span>
+        <span>Redis</span><span aria-hidden="true">·</span>
+        <span>Kubernetes</span><span aria-hidden="true">·</span>
+        <span>GitHub Actions</span><span aria-hidden="true">·</span>
+        <!-- Duplicate for infinite scroll -->
+        <span>React</span><span aria-hidden="true">·</span>
+        <span>Next.js</span><span aria-hidden="true">·</span>
+        <span>React Native</span><span aria-hidden="true">·</span>
+        <span>Flutter</span><span aria-hidden="true">·</span>
+        <span>Node.js</span><span aria-hidden="true">·</span>
+        <span>TypeScript</span><span aria-hidden="true">·</span>
+        <span>Figma</span><span aria-hidden="true">·</span>
+        <span>AWS</span><span aria-hidden="true">·</span>
+        <span>MongoDB</span><span aria-hidden="true">·</span>
+        <span>PostgreSQL</span><span aria-hidden="true">·</span>
+        <span>Vue.js</span><span aria-hidden="true">·</span>
+        <span>Python</span><span aria-hidden="true">·</span>
+        <span>Ruby on Rails</span><span aria-hidden="true">·</span>
+        <span>Ruby</span><span aria-hidden="true">·</span>
+        <span>Docker</span><span aria-hidden="true">·</span>
+        <span>GraphQL</span><span aria-hidden="true">·</span>
+        <span>Redis</span><span aria-hidden="true">·</span>
+        <span>Kubernetes</span><span aria-hidden="true">·</span>
+        <span>GitHub Actions</span><span aria-hidden="true">·</span>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         ABOUT
+    ═══════════════════════════════════════════════════════════════════ -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-left" data-reveal>
+            <div class="section-badge">Our Story</div>
+            <h2 class="section-title">Solo Dev.<br /><span class="gradient-text">Now Agency.</span></h2>
+            <p class="body-text">
+              It started with a passion — writing code late into the night, turning clients' dreams
+              into lived realities one pixel at a time. After delivering project after project,
+              the mission became clear: <strong>we don't just write code; we solve business problems</strong>.
+            </p>
+            <p class="body-text">
+              Today, <strong>JIN Studio</strong> is a lean, specialized team of engineers and designers
+              who work directly with clients — no account managers, no junior handoffs. Just senior
+              expertise, transparent agile delivery, and products built to scale from day one.
+            </p>
+            <a href="#contact" class="btn btn-primary mag-btn" style="margin-top:2rem;">Join the Vision</a>
+          </div>
+
+          <div class="about-stats-grid" data-reveal>
+            <div class="stat-card">
+              <div class="stat-num gradient-text">
+                <span class="counter" data-target="100">0</span>+
+              </div>
+              <h4>Projects Delivered</h4>
+              <p>Across web, mobile, and enterprise platforms</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num gradient-text">
+                <span class="counter" data-target="99">0</span>%
+              </div>
+              <h4>Client Satisfaction</h4>
+              <p>Because quality is never a negotiation</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num gradient-text">
+                <span class="counter" data-target="7">0</span>+
+              </div>
+              <h4>Years of Experience</h4>
+              <p>Building with passion, precision and purpose</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num gradient-text">24/7</div>
+              <h4>Dedicated Support</h4>
+              <p>Always here when you need us, without exception</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         SERVICES
+    ═══════════════════════════════════════════════════════════════════ -->
+    <section id="services" class="section services">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div class="section-badge">What We Do</div>
+          <h2 class="section-title">Our <span class="gradient-text">Services</span></h2>
+          <p class="section-desc">A full spectrum of digital services — from concept to launch and beyond.</p>
+        </div>
+        <div class="services-grid" data-reveal>
+
+          <div class="service-card">
+            <div class="service-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <h3>Web Development</h3>
+            <p>Modern, fast, scalable applications built with React, Next.js, and Node.js that perform beautifully across all devices.</p>
+            <div class="service-tags">
+              <a href="https://opencollective.com" target="_blank" rel="noopener noreferrer" title="Open Collective — React">React</a><a href="https://ghost.org" target="_blank" rel="noopener noreferrer" title="Ghost — Node.js">Node.js</a><a href="https://keystonejs.com" target="_blank" rel="noopener noreferrer" title="KeystoneJS — Next.js">Next.js</a>
+            </div>
+            <div class="service-arrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+            </div>
+            <h3>Mobile Development</h3>
+            <p>Cross-platform apps that feel truly native. Built with React Native and Flutter, shipped to iOS and Android simultaneously.</p>
+            <div class="service-tags">
+              <a href="https://mattermost.com" target="_blank" rel="noopener noreferrer" title="Mattermost — React Native">React Native</a><a href="https://rive.app" target="_blank" rel="noopener noreferrer" title="Rive — Flutter">Flutter</a><a href="https://snack.expo.dev" target="_blank" rel="noopener noreferrer" title="Expo Snack — Expo">Expo</a>
+            </div>
+            <div class="service-arrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+            </div>
+            <h3>UI/UX Design</h3>
+            <p>User-centered design that converts. From wireframes to polished, high-fidelity prototypes that users love to interact with.</p>
+            <div class="service-tags">
+              <a href="https://www.figma.com" target="_blank" rel="noopener noreferrer" title="Figma.com — built with Figma">Figma</a><span>Prototyping</span><span>Research</span>
+            </div>
+            <div class="service-arrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>Brand Identity</h3>
+            <p>Cohesive brand systems that tell your story — logo design, color palettes, typography, and complete visual language guides.</p>
+            <div class="service-tags">
+              <span>Logo</span><span>Branding</span><span>Style Guide</span>
+            </div>
+            <div class="service-arrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            </div>
+            <h3>E-commerce</h3>
+            <p>High-converting online stores built for growth. Custom solutions or Shopify/WooCommerce — optimized for sales from day one.</p>
+            <div class="service-tags">
+              <a href="https://www.shopify.com" target="_blank" rel="noopener noreferrer" title="Shopify — the platform itself">Shopify</a><a href="https://woocommerce.com" target="_blank" rel="noopener noreferrer" title="WooCommerce.com">WooCommerce</a><span>Custom</span>
+            </div>
+            <div class="service-arrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <h3>Consulting</h3>
+            <p>Strategic technical consulting to plan your roadmap, choose the right stack, and architect systems built to scale.</p>
+            <div class="service-tags">
+              <span>Strategy</span><span>Architecture</span><span>Roadmap</span>
+            </div>
+            <div class="service-arrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+
+          <div class="service-card service-card-ruby">
+            <div class="service-icon-wrap service-icon-ruby">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l3 6-9 12L3 9z"/><path d="M3 9h18"/><path d="M6 3l3 6m6-6l3 6"/></svg>
+            </div>
+            <h3>Ruby on Rails</h3>
+            <p>Expert full-stack engineering with Ruby on Rails — from rapid MVPs to complex enterprise platforms with clean, maintainable code that scales.</p>
+            <div class="service-tags">
+              <a href="https://hey.com" class="tag-ruby" target="_blank" rel="noopener noreferrer" title="HEY — built with Rails 7">Rails 7</a><a href="https://hey.com" class="tag-ruby" target="_blank" rel="noopener noreferrer" title="HEY — built with Hotwire">Hotwire</a><a href="https://basecamp.com" class="tag-ruby" target="_blank" rel="noopener noreferrer" title="Basecamp — ActiveRecord">ActiveRecord</a><a href="https://www.shopify.com" class="tag-ruby" target="_blank" rel="noopener noreferrer" title="Shopify — powered by Sidekiq">Sidekiq</a>
+            </div>
+            <div class="service-arrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         WHY US
+    ═══════════════════════════════════════════════════════════════════ -->
+    <section class="section why-us">
+      <div class="container">
+        <div class="why-grid">
+          <div class="why-left" data-reveal>
+            <div class="section-badge">Why Choose Us</div>
+            <h2 class="section-title">We Don't Just Write Code;<br /><span class="gradient-text">We Solve Problems.</span></h2>
+            <p class="body-text">
+              Our lean, specialized team means you work directly with senior developers —
+              not account managers or junior staff. We bring engineering precision, design
+              sensibility, and strategic thinking to build products that actually move the needle.
+            </p>
+            <ul class="why-checks">
+              <li>
+                <span class="why-check-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <span><strong>Direct access to senior developers</strong> — always talking to the experts building your product, not intermediaries.</span>
+              </li>
+              <li>
+                <span class="why-check-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <span><strong>Transparent agile methodology</strong> — clear communication, visible progress, and zero surprises at every sprint.</span>
+              </li>
+              <li>
+                <span class="why-check-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <span><strong>Focus on scalability and performance</strong> — architecture designed to grow confidently with your business from day one.</span>
+              </li>
+              <li>
+                <span class="why-check-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <span><strong>Conversion-optimized design</strong> — beautiful interfaces engineered to drive real, measurable business results.</span>
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-primary mag-btn" style="margin-top:2.5rem;">Start a Conversation</a>
+          </div>
+          <div class="why-right" data-reveal>
+            <div class="why-stats-grid">
+              <div class="why-stat-card">
+                <div class="why-stat-num gradient-text">100<span class="why-plus">+</span></div>
+                <p>Projects Completed</p>
+              </div>
+              <div class="why-stat-card">
+                <div class="why-stat-num gradient-text">99<span class="why-plus">%</span></div>
+                <p>Client Satisfaction</p>
+              </div>
+              <div class="why-stat-card">
+                <div class="why-stat-num gradient-text">7<span class="why-plus">+</span></div>
+                <p>Years Experience</p>
+              </div>
+              <div class="why-stat-card">
+                <div class="why-stat-num gradient-text">24/7</div>
+                <p>Dedicated Support</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         SKILLS
+    ═══════════════════════════════════════════════════════════════════ -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <div class="skills-grid">
+          <div class="skills-left" data-reveal>
+            <div class="section-badge">Tech Stack</div>
+            <h2 class="section-title">Tools We <span class="gradient-text">Master</span></h2>
+            <p class="body-text">
+              We pick the right tools for every project. No one-size-fits-all — just thoughtful,
+              modern choices that deliver the best performance and developer experience.
+            </p>
+            <div class="skill-cats">
+              <div class="skill-cat">
+                <h4><span class="cat-dot"></span>Frontend</h4>
+                <div class="skill-pills">
+                  <a href="https://opencollective.com" class="pill" target="_blank" rel="noopener noreferrer" title="Open Collective — built with React">React</a><a href="https://hashnode.com" class="pill" target="_blank" rel="noopener noreferrer" title="Hashnode — built with Next.js">Next.js</a>
+                  <a href="https://laracasts.com" class="pill" target="_blank" rel="noopener noreferrer" title="Laracasts — built with Vue.js">Vue.js</a><a href="https://linear.app" class="pill" target="_blank" rel="noopener noreferrer" title="Linear — built with TypeScript">TypeScript</a>
+                  <a href="https://daisyui.com" class="pill" target="_blank" rel="noopener noreferrer" title="DaisyUI — built with Tailwind CSS">Tailwind</a>
+                </div>
+              </div>
+              <div class="skill-cat">
+                <h4><span class="cat-dot"></span>Mobile</h4>
+                <div class="skill-pills">
+                  <a href="https://mattermost.com" class="pill" target="_blank" rel="noopener noreferrer" title="Mattermost — mobile app built with React Native">React Native</a><a href="https://rive.app" class="pill" target="_blank" rel="noopener noreferrer" title="Rive — built with Flutter">Flutter</a>
+                  <a href="https://snack.expo.dev" class="pill" target="_blank" rel="noopener noreferrer" title="Expo Snack — built with Expo">Expo</a>
+                </div>
+              </div>
+              <div class="skill-cat">
+                <h4><span class="cat-dot"></span>Backend</h4>
+                <div class="skill-pills">
+                  <a href="https://ghost.org" class="pill" target="_blank" rel="noopener noreferrer" title="Ghost — publishing platform built with Node.js">Node.js</a><a href="https://keystonejs.com" class="pill" target="_blank" rel="noopener noreferrer" title="KeystoneJS — headless CMS built with Express">Express</a>
+                  <a href="https://datasette.io" class="pill" target="_blank" rel="noopener noreferrer" title="Datasette — data exploration tool built with Python">Python</a><a href="https://pydantic.dev" class="pill" target="_blank" rel="noopener noreferrer" title="Pydantic — validation library powering FastAPI">FastAPI</a>
+                </div>
+              </div>
+              <div class="skill-cat">
+                <h4><span class="cat-dot cat-dot-ruby"></span>Ruby on Rails</h4>
+                <div class="skill-pills">
+                  <a href="https://letterboxd.com" class="pill pill-ruby" target="_blank" rel="noopener noreferrer" title="Letterboxd — film diary built with Ruby on Rails">Ruby on Rails</a><a href="https://writebook.com" class="pill pill-ruby" target="_blank" rel="noopener noreferrer" title="Writebook — by 37signals, built with Rails 7">Rails 7</a>
+                  <a href="https://gorails.com" class="pill pill-ruby" target="_blank" rel="noopener noreferrer" title="GoRails — tutorials site using ActiveRecord">ActiveRecord</a><a href="https://dribbble.com" class="pill pill-ruby" target="_blank" rel="noopener noreferrer" title="Dribbble — design community powered by Sidekiq">Sidekiq</a>
+                  <a href="https://hey.com" class="pill pill-ruby" target="_blank" rel="noopener noreferrer" title="HEY — email service built with Hotwire">Hotwire</a><a href="https://thoughtbot.com" class="pill pill-ruby" target="_blank" rel="noopener noreferrer" title="thoughtbot — creators of RSpec best practices">RSpec</a>
+                  <a href="https://letterboxd.com" class="pill pill-ruby" target="_blank" rel="noopener noreferrer" title="Letterboxd — authentication powered by Devise">Devise</a>
+                </div>
+              </div>
+              <div class="skill-cat">
+                <h4><span class="cat-dot"></span>Cloud &amp; Database</h4>
+                <div class="skill-pills">
+                  <a href="https://lobste.rs" class="pill" target="_blank" rel="noopener noreferrer" title="Lobste.rs — tech link aggregator running on PostgreSQL">PostgreSQL</a><a href="https://buttercms.com" class="pill" target="_blank" rel="noopener noreferrer" title="ButterCMS — headless CMS backed by MongoDB">MongoDB</a>
+                  <a href="https://plausible.io" class="pill" target="_blank" rel="noopener noreferrer" title="Plausible Analytics — privacy-first analytics on AWS">AWS</a><a href="https://habitica.com" class="pill" target="_blank" rel="noopener noreferrer" title="Habitica — gamified habit tracker on Firebase">Firebase</a>
+                  <a href="https://leerob.io" class="pill" target="_blank" rel="noopener noreferrer" title="leerob.io — personal site deployed on Vercel">Vercel</a>
+                </div>
+              </div>
+              <div class="skill-cat">
+                <h4><span class="cat-dot cat-dot-devops"></span>DevOps &amp; Infra</h4>
+                <div class="skill-pills">
+                  <a href="https://portainer.io" class="pill pill-devops" target="_blank" rel="noopener noreferrer" title="Portainer — Docker management UI">Docker</a><a href="https://headlamp.dev" class="pill pill-devops" target="_blank" rel="noopener noreferrer" title="Headlamp — Kubernetes dashboard">Kubernetes</a>
+                  <a href="https://changesets.app" class="pill pill-devops" target="_blank" rel="noopener noreferrer" title="Changesets — release tooling with GitHub Actions">GitHub Actions</a><a href="https://plausible.io" class="pill pill-devops" target="_blank" rel="noopener noreferrer" title="Plausible Analytics — session caching with Redis">Redis</a>
+                  <a href="https://stellate.co" class="pill pill-devops" target="_blank" rel="noopener noreferrer" title="Stellate — GraphQL CDN">GraphQL</a><a href="https://tldr.sh" class="pill pill-devops" target="_blank" rel="noopener noreferrer" title="tldr.sh — simplified man pages, Bash tooling">Bash</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-right" data-reveal>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span>Frontend Development</span><span class="skill-pct">95%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill" data-width="95"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span>UI / UX Design</span><span class="skill-pct">90%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span>Mobile Development</span><span class="skill-pct">88%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill" data-width="88"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span>Backend &amp; APIs</span><span class="skill-pct">85%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span>Cloud &amp; DevOps</span><span class="skill-pct">80%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span>Ruby on Rails</span><span class="skill-pct ruby-pct">92%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill skill-fill-ruby" data-width="92"></div></div>
+              </div>
+            </div>
+
+            <!-- Tech radar rings decoration -->
+            <div class="radar-wrap" aria-hidden="true">
+              <div class="radar radar-1"></div>
+              <div class="radar radar-2"></div>
+              <div class="radar radar-3"></div>
+              <div class="radar-center"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         PROJECTS
+    ═══════════════════════════════════════════════════════════════════ -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div class="section-badge">Portfolio</div>
+          <h2 class="section-title">Selected <span class="gradient-text">Work</span></h2>
+          <p class="section-desc">Projects that combine creative vision with technical excellence.</p>
+        </div>
+        <div class="project-filters" data-reveal>
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="mobile">Mobile</button>
+          <button class="filter-btn" data-filter="design">Design</button>
+        </div>
+        <div class="projects-grid" id="projectsGrid">
+
+          <div class="project-card" data-category="web" data-reveal>
+            <div class="project-thumb" style="--c1:#6366f1;--c2:#8b5cf6;">
+              <svg class="proj-svg" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="lx-bg" x1="0" y1="0" x2="400" y2="200" gradientUnits="userSpaceOnUse"><stop stop-color="#0c0a1e"/><stop offset="1" stop-color="#13102f"/></linearGradient>
+                  <linearGradient id="lx-gr" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+                  <linearGradient id="lx-h" x1="10" y1="32" x2="193" y2="92" gradientUnits="userSpaceOnUse"><stop stop-color="#4f46e5" stop-opacity=".7"/><stop offset="1" stop-color="#7c3aed" stop-opacity=".5"/></linearGradient>
+                  <linearGradient id="lx-c1" x1="10" y1="118" x2="128" y2="158" gradientUnits="userSpaceOnUse"><stop stop-color="#4f46e5" stop-opacity=".65"/><stop offset="1" stop-color="#7c3aed" stop-opacity=".45"/></linearGradient>
+                  <linearGradient id="lx-c2" x1="140" y1="118" x2="258" y2="158" gradientUnits="userSpaceOnUse"><stop stop-color="#7c3aed" stop-opacity=".65"/><stop offset="1" stop-color="#a855f7" stop-opacity=".45"/></linearGradient>
+                  <linearGradient id="lx-c3" x1="270" y1="118" x2="390" y2="158" gradientUnits="userSpaceOnUse"><stop stop-color="#6366f1" stop-opacity=".65"/><stop offset="1" stop-color="#818cf8" stop-opacity=".45"/></linearGradient>
+                </defs>
+                <rect width="400" height="200" fill="url(#lx-bg)"/>
+                <rect width="400" height="26" fill="#100e27"/>
+                <rect x="10" y="8" width="34" height="10" rx="3" fill="url(#lx-gr)"/>
+                <rect x="52" y="10" width="22" height="5" rx="2" fill="#fff" opacity=".2"/>
+                <rect x="80" y="10" width="28" height="5" rx="2" fill="#fff" opacity=".2"/>
+                <rect x="115" y="10" width="18" height="5" rx="2" fill="#fff" opacity=".2"/>
+                <rect x="188" y="7" width="110" height="12" rx="6" fill="#1a1740"/>
+                <circle cx="200" cy="13" r="3" stroke="#64748b" stroke-width="1.2" fill="none"/>
+                <rect x="313" y="7" width="26" height="12" rx="6" fill="url(#lx-gr)" opacity=".9"/>
+                <rect x="346" y="7" width="42" height="12" rx="6" fill="#1a1740"/>
+                <rect x="10" y="32" width="183" height="58" rx="7" fill="url(#lx-h)"/>
+                <rect x="18" y="40" width="52" height="8" rx="3" fill="#fff" opacity=".85"/>
+                <rect x="18" y="52" width="100" height="5" rx="2" fill="#e2e8f0" opacity=".55"/>
+                <rect x="18" y="61" width="75" height="4" rx="2" fill="#94a3b8" opacity=".4"/>
+                <rect x="18" y="72" width="50" height="12" rx="6" fill="url(#lx-gr)"/>
+                <rect x="75" y="74" width="36" height="8" rx="4" fill="none" stroke="#8b5cf6" stroke-width=".9"/>
+                <circle cx="159" cy="61" r="22" fill="#6366f1" opacity=".09"/>
+                <rect x="148" y="44" width="22" height="30" rx="6" fill="#8b5cf6" opacity=".25"/>
+                <rect x="152" y="48" width="14" height="10" rx="2" fill="#a78bfa" opacity=".5"/>
+                <rect x="200" y="32" width="190" height="58" rx="7" fill="#100e27" stroke="#7c3aed" stroke-width=".6" stroke-opacity=".35"/>
+                <rect x="208" y="38" width="55" height="5" rx="2" fill="#fff" opacity=".45"/>
+                <rect x="208" y="47" width="170" height="35" rx="4" fill="#1a1740" opacity=".7"/>
+                <rect x="213" y="51" width="36" height="22" rx="4" fill="#4f46e5" opacity=".22"/>
+                <circle cx="231" cy="62" r="8" fill="#8b5cf6" opacity=".5"/>
+                <rect x="255" y="51" width="36" height="22" rx="4" fill="#7c3aed" opacity=".2"/>
+                <circle cx="273" cy="62" r="8" fill="#a855f7" opacity=".5"/>
+                <rect x="297" y="51" width="36" height="22" rx="4" fill="#6366f1" opacity=".18"/>
+                <circle cx="315" cy="62" r="8" fill="#818cf8" opacity=".45"/>
+                <rect x="339" y="51" width="34" height="22" rx="4" fill="#6d28d9" opacity=".18"/>
+                <circle cx="356" cy="62" r="8" fill="#7c3aed" opacity=".45"/>
+                <rect x="10" y="100" width="90" height="6" rx="3" fill="#fff" opacity=".5"/>
+                <rect x="10" y="110" width="55" height="4" rx="2" fill="#64748b" opacity=".4"/>
+                <rect x="10" y="120" width="118" height="72" rx="7" fill="#13102e" stroke="#6366f1" stroke-opacity=".22" stroke-width=".7"/>
+                <rect x="10" y="120" width="118" height="38" rx="7" fill="url(#lx-c1)"/>
+                <circle cx="69" cy="139" r="12" fill="#8b5cf6" opacity=".18"/>
+                <rect x="61" y="131" width="16" height="16" rx="4" fill="url(#lx-gr)" opacity=".45"/>
+                <rect x="17" y="164" width="65" height="4" rx="2" fill="#e2e8f0" opacity=".6"/>
+                <rect x="17" y="172" width="32" height="4" rx="2" fill="#a78bfa" opacity=".9"/>
+                <rect x="17" y="180" width="52" height="4" rx="1" fill="#f59e0b" opacity=".65"/>
+                <rect x="86" y="178" width="34" height="10" rx="5" fill="url(#lx-gr)"/>
+                <rect x="140" y="120" width="118" height="72" rx="7" fill="#13102e" stroke="#7c3aed" stroke-opacity=".22" stroke-width=".7"/>
+                <rect x="140" y="120" width="118" height="38" rx="7" fill="url(#lx-c2)"/>
+                <rect x="218" y="122" width="28" height="11" rx="4" fill="#ef4444" opacity=".9"/>
+                <rect x="222" y="126" width="18" height="4" rx="1" fill="#fff" opacity=".9"/>
+                <circle cx="199" cy="139" r="12" fill="#a855f7" opacity=".18"/>
+                <rect x="191" y="131" width="16" height="16" rx="4" fill="#a855f7" opacity=".45"/>
+                <rect x="147" y="164" width="65" height="4" rx="2" fill="#e2e8f0" opacity=".6"/>
+                <rect x="147" y="172" width="38" height="4" rx="2" fill="#a78bfa" opacity=".9"/>
+                <rect x="147" y="180" width="44" height="4" rx="1" fill="#f59e0b" opacity=".6"/>
+                <rect x="218" y="178" width="34" height="10" rx="5" fill="url(#lx-gr)"/>
+                <rect x="270" y="120" width="120" height="72" rx="7" fill="#13102e" stroke="#6366f1" stroke-opacity=".22" stroke-width=".7"/>
+                <rect x="270" y="120" width="120" height="38" rx="7" fill="url(#lx-c3)"/>
+                <rect x="354" y="122" width="24" height="11" rx="4" fill="#10b981" opacity=".9"/>
+                <rect x="357" y="126" width="16" height="4" rx="1" fill="#fff" opacity=".9"/>
+                <circle cx="330" cy="139" r="12" fill="#6366f1" opacity=".18"/>
+                <rect x="322" y="131" width="16" height="16" rx="4" fill="#6366f1" opacity=".45"/>
+                <rect x="277" y="164" width="65" height="4" rx="2" fill="#e2e8f0" opacity=".6"/>
+                <rect x="277" y="172" width="40" height="4" rx="2" fill="#a78bfa" opacity=".9"/>
+                <rect x="277" y="180" width="48" height="4" rx="1" fill="#f59e0b" opacity=".6"/>
+                <rect x="350" y="178" width="34" height="10" rx="5" fill="url(#lx-gr)"/>
+              </svg>
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="proj-link" aria-label="View live demo">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Live Demo
+                  </a>
+                  <a href="#" class="proj-link" aria-label="View source code">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                    Code
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-meta">
+              <div class="project-tags"><a href="https://opencollective.com" target="_blank" rel="noopener noreferrer" title="Open Collective — React">React</a><a href="https://ghost.org" target="_blank" rel="noopener noreferrer" title="Ghost — Node.js">Node.js</a><a href="https://lobste.rs" target="_blank" rel="noopener noreferrer" title="Lobste.rs — PostgreSQL">PostgreSQL</a></div>
+              <h3>LuxeCommerce Platform</h3>
+              <p>High-end e-commerce platform with real-time inventory, AI-driven recommendations, and seamless payment flows.</p>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="mobile" data-reveal>
+            <div class="project-thumb" style="--c1:#10b981;--c2:#06b6d4;">
+              <svg class="proj-svg" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="qb-bg" x1="0" y1="0" x2="400" y2="200" gradientUnits="userSpaceOnUse"><stop stop-color="#061412"/><stop offset="1" stop-color="#04181e"/></linearGradient>
+                  <linearGradient id="qb-rt" x1="100" y1="140" x2="300" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#10b981"/><stop offset="1" stop-color="#06b6d4"/></linearGradient>
+                  <linearGradient id="qb-card" x1="0" y1="130" x2="0" y2="200" gradientUnits="userSpaceOnUse"><stop stop-color="#0c1f1a"/><stop offset="1" stop-color="#071612"/></linearGradient>
+                </defs>
+                <rect width="400" height="200" fill="url(#qb-bg)"/>
+                <line x1="80" y1="0" x2="80" y2="132" stroke="#0d2e28" stroke-width="9"/>
+                <line x1="160" y1="0" x2="160" y2="132" stroke="#0d2e28" stroke-width="9"/>
+                <line x1="240" y1="0" x2="240" y2="132" stroke="#0d2e28" stroke-width="9"/>
+                <line x1="320" y1="0" x2="320" y2="132" stroke="#0d2e28" stroke-width="9"/>
+                <line x1="0" y1="40" x2="400" y2="40" stroke="#0d2e28" stroke-width="7"/>
+                <line x1="0" y1="80" x2="400" y2="80" stroke="#0d2e28" stroke-width="7"/>
+                <line x1="0" y1="120" x2="400" y2="120" stroke="#0d2e28" stroke-width="7"/>
+                <rect x="88" y="48" width="64" height="24" rx="3" fill="#0a2820" opacity=".85"/>
+                <rect x="170" y="8" width="60" height="24" rx="3" fill="#0a2820" opacity=".7"/>
+                <rect x="250" y="48" width="60" height="24" rx="3" fill="#0a2820" opacity=".8"/>
+                <rect x="88" y="8" width="60" height="24" rx="3" fill="#081e18" opacity=".7"/>
+                <rect x="330" y="8" width="62" height="24" rx="3" fill="#081e18" opacity=".6"/>
+                <rect x="168" y="48" width="64" height="24" rx="3" fill="#081e18" opacity=".65"/>
+                <path d="M110 108 Q160 32 292 54" stroke="url(#qb-rt)" stroke-width="2.5" fill="none" stroke-dasharray="5 3" opacity=".75"/>
+                <circle cx="180" cy="63" r="4" fill="#10b981" opacity=".55"/>
+                <circle cx="232" cy="54" r="4" fill="#06b6d4" opacity=".55"/>
+                <circle cx="110" cy="108" r="11" fill="#10b981" opacity=".18"/>
+                <circle cx="110" cy="108" r="6.5" fill="#10b981"/>
+                <rect x="107" y="105" width="6" height="6" rx="1.5" fill="#fff" opacity=".9"/>
+                <circle cx="292" cy="54" r="11" fill="#06b6d4" opacity=".18"/>
+                <circle cx="292" cy="54" r="6.5" fill="#06b6d4"/>
+                <path d="M289 54 l3-4.5 3 4.5 v4 h-2 v-2.5 h-2 v2.5 h-2 z" fill="#fff" opacity=".9"/>
+                <circle cx="188" cy="77" r="8" fill="#061412" stroke="url(#qb-rt)" stroke-width="2"/>
+                <circle cx="188" cy="77" r="3.5" fill="#10b981"/>
+                <rect x="0" y="132" width="400" height="68" fill="url(#qb-card)"/>
+                <rect x="0" y="132" width="400" height="1" fill="#10b981" opacity=".3"/>
+                <rect x="12" y="142" width="82" height="22" rx="11" fill="#10b981" opacity=".14" stroke="#10b981" stroke-width=".7" stroke-opacity=".45"/>
+                <rect x="20" y="150" width="10" height="6" rx="1" fill="#10b981" opacity=".8"/>
+                <rect x="34" y="151" width="52" height="4" rx="2" fill="#fff" opacity=".55"/>
+                <rect x="106" y="140" width="120" height="7" rx="3" fill="#fff" opacity=".75"/>
+                <rect x="106" y="151" width="78" height="4" rx="2" fill="#10b981" opacity=".65"/>
+                <circle cx="352" cy="151" r="17" fill="#0d2e28" stroke="url(#qb-rt)" stroke-width="1.2"/>
+                <circle cx="352" cy="147" r="5.5" fill="#10b981" opacity=".5"/>
+                <path d="M343 157 q9-5 18 0" stroke="#10b981" stroke-width="1" fill="none" opacity=".45"/>
+                <rect x="12" y="173" width="376" height="5" rx="2.5" fill="#0d2e28"/>
+                <rect x="12" y="173" width="225" height="5" rx="2.5" fill="url(#qb-rt)"/>
+                <circle cx="12" cy="175.5" r="4.5" fill="#10b981"/>
+                <circle cx="137" cy="175.5" r="4.5" fill="#10b981"/>
+                <circle cx="237" cy="175.5" r="4.5" fill="#06b6d4"/>
+                <circle cx="315" cy="175.5" r="4.5" fill="#1e3a35" stroke="#10b981" stroke-width=".8"/>
+                <circle cx="388" cy="175.5" r="4.5" fill="#1e3a35" stroke="#10b981" stroke-width=".8"/>
+                <rect x="2" y="183" width="22" height="3.5" rx="1.5" fill="#10b981" opacity=".55"/>
+                <rect x="124" y="183" width="26" height="3.5" rx="1.5" fill="#10b981" opacity=".55"/>
+                <rect x="222" y="183" width="30" height="3.5" rx="1.5" fill="#06b6d4" opacity=".55"/>
+                <rect x="303" y="183" width="26" height="3.5" rx="1.5" fill="#475569" opacity=".5"/>
+                <rect x="376" y="183" width="22" height="3.5" rx="1.5" fill="#475569" opacity=".5"/>
+              </svg>
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="proj-link" aria-label="View on App Store">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    App Store
+                  </a>
+                  <a href="#" class="proj-link" aria-label="View source code">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                    Code
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-meta">
+              <div class="project-tags"><a href="https://mattermost.com" target="_blank" rel="noopener noreferrer" title="Mattermost — React Native">React Native</a><a href="https://habitica.com" target="_blank" rel="noopener noreferrer" title="Habitica — Firebase">Firebase</a><a href="https://stripe.com" target="_blank" rel="noopener noreferrer" title="Stripe.com — Stripe">Stripe</a></div>
+              <h3>QuickBite Delivery</h3>
+              <p>Full-featured food delivery app with real-time GPS tracking, driver management, and integrated Stripe payments.</p>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="design" data-reveal>
+            <div class="project-thumb" style="--c1:#f59e0b;--c2:#ef4444;">
+              <svg class="proj-svg" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="nx-bg" x1="0" y1="0" x2="400" y2="200" gradientUnits="userSpaceOnUse"><stop stop-color="#0d0906"/><stop offset="1" stop-color="#1a0f05"/></linearGradient>
+                  <linearGradient id="nx-logo" x1="40" y1="30" x2="140" y2="160" gradientUnits="userSpaceOnUse"><stop stop-color="#f59e0b"/><stop offset="1" stop-color="#ef4444"/></linearGradient>
+                </defs>
+                <rect width="400" height="200" fill="url(#nx-bg)"/>
+                <rect x="0" y="0" width="185" height="200" fill="#0e0a07"/>
+                <rect x="0" y="0" width="185" height="200" fill="url(#nx-logo)" opacity=".04"/>
+                <circle cx="18" cy="18" r="1.5" fill="#f59e0b" opacity=".3"/>
+                <circle cx="36" cy="18" r="1.5" fill="#f59e0b" opacity=".18"/>
+                <circle cx="18" cy="36" r="1.5" fill="#f59e0b" opacity=".18"/>
+                <circle cx="36" cy="36" r="1.5" fill="#f59e0b" opacity=".1"/>
+                <path d="M 48 45 L 48 148 L 78 80 L 136 148 L 136 45" stroke="url(#nx-logo)" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="48" cy="45" r="6" fill="#f59e0b" opacity=".7"/>
+                <circle cx="136" cy="45" r="6" fill="#ef4444" opacity=".7"/>
+                <rect x="36" y="160" width="112" height="7" rx="3" fill="#f59e0b" opacity=".65"/>
+                <rect x="52" y="172" width="80" height="4" rx="2" fill="#fff" opacity=".2"/>
+                <rect x="20" y="182" width="60" height="3" rx="1.5" fill="#fff" opacity=".12"/>
+                <rect x="86" y="182" width="60" height="3" rx="1.5" fill="#fff" opacity=".12"/>
+                <rect x="185" y="0" width="1" height="200" fill="#f59e0b" opacity=".08"/>
+                <rect x="193" y="16" width="75" height="6" rx="3" fill="#fff" opacity=".45"/>
+                <rect x="193" y="26" width="45" height="3.5" rx="1.5" fill="#fff" opacity=".18"/>
+                <rect x="193" y="38" width="32" height="32" rx="6" fill="#f59e0b"/>
+                <rect x="231" y="38" width="32" height="32" rx="6" fill="#ef4444"/>
+                <rect x="269" y="38" width="32" height="32" rx="6" fill="#1a0f05" stroke="#f59e0b" stroke-width=".8"/>
+                <rect x="307" y="38" width="32" height="32" rx="6" fill="#f8f0e3" opacity=".88"/>
+                <rect x="345" y="38" width="42" height="32" rx="6" fill="#7c3305" opacity=".7"/>
+                <rect x="193" y="74" width="24" height="3" rx="1" fill="#fff" opacity=".28"/>
+                <rect x="231" y="74" width="22" height="3" rx="1" fill="#fff" opacity=".28"/>
+                <rect x="269" y="74" width="26" height="3" rx="1" fill="#fff" opacity=".28"/>
+                <rect x="307" y="74" width="20" height="3" rx="1" fill="#fff" opacity=".28"/>
+                <rect x="345" y="74" width="28" height="3" rx="1" fill="#fff" opacity=".28"/>
+                <rect x="193" y="85" width="72" height="6" rx="3" fill="#fff" opacity=".45"/>
+                <rect x="193" y="95" width="48" height="3.5" rx="1.5" fill="#fff" opacity=".18"/>
+                <text x="193" y="140" font-size="46" font-family="Georgia,serif" fill="url(#nx-logo)" opacity=".88">Aa</text>
+                <rect x="193" y="146" width="140" height="2.5" rx="1" fill="#f59e0b" opacity=".28"/>
+                <rect x="193" y="152" width="110" height="4" rx="2" fill="#fff" opacity=".28"/>
+                <rect x="193" y="160" width="80" height="4" rx="2" fill="#fff" opacity=".18"/>
+                <rect x="193" y="168" width="55" height="4" rx="2" fill="#f59e0b" opacity=".5"/>
+                <rect x="193" y="180" width="58" height="14" rx="7" fill="#f59e0b" opacity=".9"/>
+                <rect x="197" y="185" width="50" height="4" rx="1" fill="#fff" opacity=".85"/>
+                <rect x="257" y="180" width="58" height="14" rx="7" fill="none" stroke="#f59e0b" stroke-width="1"/>
+                <rect x="261" y="185" width="50" height="4" rx="1" fill="#f59e0b" opacity=".6"/>
+                <rect x="321" y="180" width="68" height="14" rx="7" fill="#ef4444" opacity=".85"/>
+                <rect x="325" y="185" width="60" height="4" rx="1" fill="#fff" opacity=".85"/>
+              </svg>
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="proj-link" aria-label="View design">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    View Design
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-meta">
+              <div class="project-tags"><a href="https://www.figma.com" target="_blank" rel="noopener noreferrer" title="Figma.com — Figma">Figma</a><span>Branding</span><span>UI System</span></div>
+              <h3>Nexus Brand Identity</h3>
+              <p>Complete brand identity for a fintech startup — logo, color system, typography, and a full UI component library.</p>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="web" data-reveal>
+            <div class="project-thumb" style="--c1:#ec4899;--c2:#8b5cf6;">
+              <svg class="proj-svg" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="hp-bg" x1="0" y1="0" x2="400" y2="200" gradientUnits="userSpaceOnUse"><stop stop-color="#0e080f"/><stop offset="1" stop-color="#12081a"/></linearGradient>
+                  <linearGradient id="hp-gr" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#ec4899"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+                  <linearGradient id="hp-area" x1="0" y1="90" x2="0" y2="185" gradientUnits="userSpaceOnUse"><stop stop-color="#ec4899" stop-opacity=".32"/><stop offset="1" stop-color="#8b5cf6" stop-opacity=".02"/></linearGradient>
+                  <linearGradient id="hp-line" x1="20" y1="0" x2="390" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#ec4899"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+                </defs>
+                <rect width="400" height="200" fill="url(#hp-bg)"/>
+                <rect width="400" height="24" fill="#120910"/>
+                <rect x="10" y="7" width="65" height="10" rx="3" fill="url(#hp-gr)" opacity=".7"/>
+                <rect x="300" y="7" width="56" height="10" rx="5" fill="#1f1024" stroke="#ec4899" stroke-width=".6" stroke-opacity=".4"/>
+                <circle cx="370" cy="12" r="7" fill="#1f1024" stroke="#8b5cf6" stroke-width=".6" stroke-opacity=".4"/>
+                <rect x="10" y="30" width="85" height="44" rx="6" fill="#180d1f" stroke="#ec4899" stroke-width=".5" stroke-opacity=".3"/>
+                <rect x="18" y="37" width="35" height="5" rx="2" fill="#ec4899" opacity=".6"/>
+                <rect x="18" y="46" width="55" height="9" rx="3" fill="#fff" opacity=".8"/>
+                <rect x="18" y="59" width="40" height="4" rx="2" fill="#10b981" opacity=".6"/>
+                <rect x="102" y="30" width="85" height="44" rx="6" fill="#180d1f" stroke="#d946ef" stroke-width=".5" stroke-opacity=".3"/>
+                <rect x="110" y="37" width="42" height="5" rx="2" fill="#d946ef" opacity=".6"/>
+                <rect x="110" y="46" width="52" height="9" rx="3" fill="#fff" opacity=".8"/>
+                <rect x="110" y="59" width="44" height="4" rx="2" fill="#f59e0b" opacity=".6"/>
+                <rect x="194" y="30" width="85" height="44" rx="6" fill="#180d1f" stroke="#8b5cf6" stroke-width=".5" stroke-opacity=".3"/>
+                <rect x="202" y="37" width="52" height="5" rx="2" fill="#8b5cf6" opacity=".6"/>
+                <rect x="202" y="46" width="48" height="9" rx="3" fill="#fff" opacity=".8"/>
+                <rect x="202" y="59" width="38" height="4" rx="2" fill="#10b981" opacity=".6"/>
+                <rect x="286" y="30" width="104" height="44" rx="6" fill="#180d1f" stroke="#a78bfa" stroke-width=".5" stroke-opacity=".3"/>
+                <rect x="294" y="37" width="42" height="5" rx="2" fill="#a78bfa" opacity=".6"/>
+                <rect x="294" y="46" width="64" height="9" rx="3" fill="#fff" opacity=".8"/>
+                <rect x="294" y="59" width="48" height="4" rx="2" fill="#10b981" opacity=".6"/>
+                <rect x="10" y="82" width="380" height="108" rx="7" fill="#110916" stroke="#ffffff" stroke-opacity=".04" stroke-width=".6"/>
+                <line x1="10" y1="109" x2="390" y2="109" stroke="#fff" stroke-opacity=".05" stroke-width=".8"/>
+                <line x1="10" y1="130" x2="390" y2="130" stroke="#fff" stroke-opacity=".05" stroke-width=".8"/>
+                <line x1="10" y1="151" x2="390" y2="151" stroke="#fff" stroke-opacity=".05" stroke-width=".8"/>
+                <line x1="10" y1="172" x2="390" y2="172" stroke="#fff" stroke-opacity=".05" stroke-width=".8"/>
+                <line x1="77" y1="82" x2="77" y2="190" stroke="#fff" stroke-opacity=".04" stroke-width=".8"/>
+                <line x1="144" y1="82" x2="144" y2="190" stroke="#fff" stroke-opacity=".04" stroke-width=".8"/>
+                <line x1="211" y1="82" x2="211" y2="190" stroke="#fff" stroke-opacity=".04" stroke-width=".8"/>
+                <line x1="278" y1="82" x2="278" y2="190" stroke="#fff" stroke-opacity=".04" stroke-width=".8"/>
+                <line x1="345" y1="82" x2="345" y2="190" stroke="#fff" stroke-opacity=".04" stroke-width=".8"/>
+                <path d="M20 150 C50 148,70 128,90 118 C110 110,130 134,155 116 C175 102,195 130,220 113 C240 98,260 138,285 116 C305 98,325 124,355 106 C368 99,378 111,390 104 L390 190 L20 190 Z" fill="url(#hp-area)"/>
+                <path d="M20 150 C50 148,70 128,90 118 C110 110,130 134,155 116 C175 102,195 130,220 113 C240 98,260 138,285 116 C305 98,325 124,355 106 C368 99,378 111,390 104" stroke="url(#hp-line)" stroke-width="2" fill="none"/>
+                <circle cx="220" cy="113" r="5" fill="#ec4899" opacity=".35"/>
+                <circle cx="220" cy="113" r="2.5" fill="#ec4899"/>
+                <circle cx="220" cy="113" r="1.5" fill="#fff"/>
+                <rect x="204" y="89" width="58" height="20" rx="4" fill="#1f0d2a" stroke="#ec4899" stroke-width=".6"/>
+                <rect x="209" y="94" width="30" height="4" rx="1" fill="#ec4899" opacity=".7"/>
+                <rect x="209" y="102" width="42" height="3" rx="1" fill="#fff" opacity=".4"/>
+                <line x1="233" y1="109" x2="220" y2="113" stroke="#ec4899" stroke-width=".8" stroke-dasharray="3 2"/>
+                <rect x="20" y="186" width="24" height="3" rx="1" fill="#fff" opacity=".2"/>
+                <rect x="80" y="186" width="24" height="3" rx="1" fill="#fff" opacity=".2"/>
+                <rect x="140" y="186" width="24" height="3" rx="1" fill="#fff" opacity=".2"/>
+                <rect x="200" y="186" width="24" height="3" rx="1" fill="#fff" opacity=".2"/>
+                <rect x="260" y="186" width="24" height="3" rx="1" fill="#fff" opacity=".2"/>
+                <rect x="320" y="186" width="24" height="3" rx="1" fill="#fff" opacity=".2"/>
+              </svg>
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="proj-link" aria-label="View live demo">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Live Demo
+                  </a>
+                  <a href="#" class="proj-link" aria-label="View source code">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                    Code
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-meta">
+              <div class="project-tags"><a href="https://hashnode.com" target="_blank" rel="noopener noreferrer" title="Hashnode — Next.js">Next.js</a><a href="https://linear.app" target="_blank" rel="noopener noreferrer" title="Linear — TypeScript">TypeScript</a><a href="https://planetscale.com" target="_blank" rel="noopener noreferrer" title="PlanetScale — Prisma">Prisma</a></div>
+              <h3>HealthPulse Dashboard</h3>
+              <p>Analytics dashboard for healthcare providers — real-time patient monitoring, data visualization, and reporting.</p>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="mobile" data-reveal>
+            <div class="project-thumb" style="--c1:#14b8a6;--c2:#3b82f6;">
+              <svg class="proj-svg" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="cs-bg" x1="0" y1="0" x2="400" y2="200" gradientUnits="userSpaceOnUse"><stop stop-color="#030c0f"/><stop offset="1" stop-color="#050d16"/></linearGradient>
+                  <linearGradient id="cs-gr" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#14b8a6"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
+                  <linearGradient id="cs-img" x1="0" y1="112" x2="400" y2="168" gradientUnits="userSpaceOnUse"><stop stop-color="#0f766e" stop-opacity=".65"/><stop offset="1" stop-color="#1d4ed8" stop-opacity=".5"/></linearGradient>
+                </defs>
+                <rect width="400" height="200" fill="url(#cs-bg)"/>
+                <rect width="400" height="28" fill="#040c10"/>
+                <rect x="168" y="8" width="64" height="12" rx="5" fill="url(#cs-gr)" opacity=".7"/>
+                <circle cx="362" cy="14" r="8" fill="#0f2535" stroke="#3b82f6" stroke-width=".6" stroke-opacity=".5"/>
+                <rect x="16" y="9" width="24" height="10" rx="4" fill="#0f2535"/>
+                <rect x="0" y="28" width="400" height="54" fill="#040d12"/>
+                <rect x="0" y="81" width="400" height="1" fill="#14b8a6" opacity=".12"/>
+                <circle cx="30" cy="55" r="19" fill="#0a1f27" stroke="#3b82f6" stroke-width="2" stroke-dasharray="3 1.5"/>
+                <rect x="26" y="51" width="8" height="8" rx="4" fill="#3b82f6" opacity=".5"/>
+                <circle cx="80" cy="55" r="19" fill="#0a1f27" stroke="url(#cs-gr)" stroke-width="2"/>
+                <circle cx="80" cy="50" r="7" fill="#14b8a6" opacity=".4"/>
+                <path d="M72 61 q8-5 16 0" stroke="#14b8a6" stroke-width="1" fill="none" opacity=".45"/>
+                <circle cx="130" cy="55" r="19" fill="#0a1f27" stroke="url(#cs-gr)" stroke-width="2"/>
+                <circle cx="130" cy="50" r="7" fill="#3b82f6" opacity=".45"/>
+                <path d="M122 61 q8-5 16 0" stroke="#3b82f6" stroke-width="1" fill="none" opacity=".45"/>
+                <circle cx="180" cy="55" r="19" fill="#0a1f27" stroke="url(#cs-gr)" stroke-width="2"/>
+                <circle cx="180" cy="50" r="7" fill="#0ea5e9" opacity=".4"/>
+                <path d="M172 61 q8-5 16 0" stroke="#0ea5e9" stroke-width="1" fill="none" opacity=".4"/>
+                <circle cx="230" cy="55" r="19" fill="#0a1f27" stroke="url(#cs-gr)" stroke-width="2"/>
+                <circle cx="230" cy="50" r="7" fill="#14b8a6" opacity=".35"/>
+                <path d="M222 61 q8-5 16 0" stroke="#14b8a6" stroke-width="1" fill="none" opacity=".35"/>
+                <circle cx="280" cy="55" r="14" fill="#0a1f27" stroke="#475569" stroke-width="1.2" stroke-dasharray="2 1.5"/>
+                <rect x="10" y="88" width="380" height="104" rx="8" fill="#050f14" stroke="#ffffff" stroke-opacity=".06" stroke-width=".7"/>
+                <circle cx="30" cy="102" r="9" fill="#0f2535" stroke="url(#cs-gr)" stroke-width="1.2"/>
+                <circle cx="30" cy="99" r="3.5" fill="#14b8a6" opacity=".5"/>
+                <path d="M24 107 q6-3.5 12 0" stroke="#14b8a6" stroke-width=".8" fill="none" opacity=".4"/>
+                <rect x="46" y="96" width="72" height="5" rx="2" fill="#fff" opacity=".7"/>
+                <rect x="46" y="105" width="48" height="3.5" rx="1.5" fill="#64748b" opacity=".5"/>
+                <rect x="350" y="98" width="32" height="8" rx="4" fill="url(#cs-gr)" opacity=".8"/>
+                <rect x="22" y="117" width="290" height="4" rx="2" fill="#fff" opacity=".42"/>
+                <rect x="22" y="125" width="245" height="4" rx="2" fill="#fff" opacity=".3"/>
+                <rect x="18" y="135" width="364" height="42" rx="5" fill="url(#cs-img)"/>
+                <circle cx="200" cy="156" r="14" fill="#fff" opacity=".06"/>
+                <rect x="22" y="181" width="50" height="7" rx="3" fill="#14b8a6" opacity=".15"/>
+                <rect x="27" y="184" width="6" height="4" rx="1" fill="#14b8a6" opacity=".75"/>
+                <rect x="36" y="185" width="30" height="3" rx="1" fill="#fff" opacity=".38"/>
+                <rect x="82" y="181" width="52" height="7" rx="3" fill="#3b82f6" opacity=".12"/>
+                <rect x="87" y="184" width="6" height="4" rx="1" fill="#3b82f6" opacity=".75"/>
+                <rect x="96" y="185" width="30" height="3" rx="1" fill="#fff" opacity=".38"/>
+                <rect x="144" y="181" width="48" height="7" rx="3" fill="#fff" opacity=".04"/>
+                <rect x="149" y="184" width="6" height="4" rx="1" fill="#94a3b8" opacity=".7"/>
+                <rect x="158" y="185" width="26" height="3" rx="1" fill="#fff" opacity=".28"/>
+              </svg>
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="proj-link" aria-label="View on App Store">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    App Store
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-meta">
+              <div class="project-tags"><a href="https://rive.app" target="_blank" rel="noopener noreferrer" title="Rive — Flutter">Flutter</a><a href="https://pub.dev" target="_blank" rel="noopener noreferrer" title="pub.dev — Dart">Dart</a><a href="https://habitica.com" target="_blank" rel="noopener noreferrer" title="Habitica — Firebase">Firebase</a></div>
+              <h3>ConnectSphere Social</h3>
+              <p>Community-driven social platform with posts, stories, real-time messaging, and event management.</p>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="web" data-reveal>
+            <div class="project-thumb" style="--c1:#0ea5e9;--c2:#6366f1;">
+              <svg class="proj-svg" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="tf-bg" x1="0" y1="0" x2="400" y2="200" gradientUnits="userSpaceOnUse"><stop stop-color="#030912"/><stop offset="1" stop-color="#060b18"/></linearGradient>
+                  <linearGradient id="tf-gr" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#0ea5e9"/><stop offset="1" stop-color="#6366f1"/></linearGradient>
+                </defs>
+                <rect width="400" height="200" fill="url(#tf-bg)"/>
+                <rect x="0" y="0" width="54" height="200" fill="#04091a"/>
+                <rect x="54" y="0" width="1" height="200" fill="#ffffff" fill-opacity=".06"/>
+                <rect x="15" y="12" width="24" height="10" rx="4" fill="url(#tf-gr)" opacity=".85"/>
+                <rect x="0" y="30" width="3" height="10" rx="1.5" fill="#0ea5e9"/>
+                <rect x="18" y="32" width="18" height="6" rx="3" fill="#0ea5e9" opacity=".7"/>
+                <rect x="18" y="46" width="18" height="6" rx="3" fill="#fff" opacity=".12"/>
+                <rect x="18" y="60" width="18" height="6" rx="3" fill="#fff" opacity=".12"/>
+                <rect x="18" y="74" width="18" height="6" rx="3" fill="#fff" opacity=".12"/>
+                <rect x="18" y="88" width="18" height="6" rx="3" fill="#fff" opacity=".12"/>
+                <rect x="62" y="8" width="110" height="8" rx="3" fill="#fff" opacity=".6"/>
+                <rect x="62" y="20" width="68" height="4" rx="2" fill="#64748b" opacity=".45"/>
+                <rect x="308" y="7" width="82" height="15" rx="7" fill="url(#tf-gr)" opacity=".85"/>
+                <rect x="62" y="36" width="78" height="156" rx="6" fill="#0a0f1c" stroke="#0ea5e9" stroke-width=".5" stroke-opacity=".28"/>
+                <rect x="67" y="42" width="52" height="6" rx="3" fill="#0ea5e9" opacity=".7"/>
+                <rect x="124" y="42" width="12" height="12" rx="4" fill="#0ea5e9" opacity=".2"/>
+                <rect x="127" y="45" width="6" height="6" rx="2" fill="#0ea5e9" opacity=".6"/>
+                <rect x="67" y="58" width="68" height="30" rx="4" fill="#0d1626" stroke="#0ea5e9" stroke-opacity=".18" stroke-width=".6"/>
+                <circle cx="76" cy="68" r="5" fill="#0ea5e9" opacity=".38"/>
+                <rect x="84" y="64" width="44" height="4" rx="2" fill="#fff" opacity=".6"/>
+                <rect x="84" y="72" width="30" height="3" rx="1" fill="#64748b" opacity=".5"/>
+                <rect x="67" y="92" width="68" height="30" rx="4" fill="#0d1626" stroke="#0ea5e9" stroke-opacity=".15" stroke-width=".6"/>
+                <circle cx="76" cy="102" r="5" fill="#0ea5e9" opacity=".35"/>
+                <rect x="84" y="98" width="44" height="4" rx="2" fill="#fff" opacity=".55"/>
+                <rect x="84" y="106" width="28" height="3" rx="1" fill="#64748b" opacity=".45"/>
+                <rect x="67" y="126" width="68" height="30" rx="4" fill="#0d1626" stroke="#0ea5e9" stroke-opacity=".12" stroke-width=".6"/>
+                <circle cx="76" cy="136" r="5" fill="#0ea5e9" opacity=".3"/>
+                <rect x="84" y="132" width="38" height="4" rx="2" fill="#fff" opacity=".5"/>
+                <rect x="84" y="140" width="32" height="3" rx="1" fill="#64748b" opacity=".4"/>
+                <rect x="148" y="36" width="78" height="156" rx="6" fill="#0a0f1c" stroke="#6366f1" stroke-width=".5" stroke-opacity=".28"/>
+                <rect x="153" y="42" width="48" height="6" rx="3" fill="#6366f1" opacity=".7"/>
+                <rect x="208" y="42" width="14" height="12" rx="4" fill="#6366f1" opacity=".2"/>
+                <rect x="153" y="58" width="68" height="30" rx="4" fill="#0d1626" stroke="#6366f1" stroke-opacity=".2" stroke-width=".6"/>
+                <circle cx="162" cy="68" r="5" fill="#6366f1" opacity=".45"/>
+                <rect x="170" y="64" width="44" height="4" rx="2" fill="#fff" opacity=".6"/>
+                <rect x="170" y="72" width="32" height="3" rx="1" fill="#64748b" opacity=".5"/>
+                <rect x="170" y="79" width="38" height="7" rx="3" fill="#6366f1" opacity=".18" stroke="#6366f1" stroke-width=".5" stroke-opacity=".45"/>
+                <rect x="153" y="92" width="68" height="30" rx="4" fill="#0d1626" stroke="#6366f1" stroke-opacity=".15" stroke-width=".6"/>
+                <circle cx="162" cy="102" r="5" fill="#6366f1" opacity=".4"/>
+                <rect x="170" y="98" width="44" height="4" rx="2" fill="#fff" opacity=".55"/>
+                <rect x="170" y="106" width="26" height="3" rx="1" fill="#64748b" opacity=".45"/>
+                <rect x="234" y="36" width="78" height="156" rx="6" fill="#0a0f1c" stroke="#f59e0b" stroke-width=".5" stroke-opacity=".28"/>
+                <rect x="239" y="42" width="38" height="6" rx="3" fill="#f59e0b" opacity=".7"/>
+                <rect x="239" y="58" width="68" height="30" rx="4" fill="#0d1626" stroke="#f59e0b" stroke-opacity=".2" stroke-width=".6"/>
+                <circle cx="248" cy="68" r="5" fill="#f59e0b" opacity=".45"/>
+                <rect x="256" y="64" width="44" height="4" rx="2" fill="#fff" opacity=".6"/>
+                <rect x="256" y="72" width="30" height="3" rx="1" fill="#64748b" opacity=".5"/>
+                <rect x="256" y="79" width="32" height="7" rx="3" fill="#f59e0b" opacity=".16" stroke="#f59e0b" stroke-width=".5" stroke-opacity=".45"/>
+                <rect x="320" y="36" width="72" height="156" rx="6" fill="#0a0f1c" stroke="#10b981" stroke-width=".5" stroke-opacity=".28"/>
+                <rect x="325" y="42" width="40" height="6" rx="3" fill="#10b981" opacity=".7"/>
+                <rect x="325" y="58" width="62" height="30" rx="4" fill="#0d1626" stroke="#10b981" stroke-opacity=".22" stroke-width=".6"/>
+                <circle cx="334" cy="68" r="5" fill="#10b981" opacity=".45"/>
+                <rect x="342" y="64" width="38" height="4" rx="2" fill="#fff" opacity=".6"/>
+                <rect x="342" y="72" width="24" height="3" rx="1" fill="#64748b" opacity=".5"/>
+                <circle cx="374" cy="70" r="7" fill="#10b981" opacity=".18"/>
+                <path d="M371 70 l2 2.5 4.5-5" stroke="#10b981" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="proj-link" aria-label="View live demo">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-meta">
+              <div class="project-tags"><a href="https://laracasts.com" target="_blank" rel="noopener noreferrer" title="Laracasts — Vue.js">Vue.js</a><a href="https://datasette.io" target="_blank" rel="noopener noreferrer" title="Datasette — Python">Python</a><a href="https://plausible.io" target="_blank" rel="noopener noreferrer" title="Plausible — AWS">AWS</a></div>
+              <h3>TalentFlow HR System</h3>
+              <p>Enterprise HR platform with recruitment tracking, employee onboarding workflows, and performance analytics.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         PROCESS
+    ═══════════════════════════════════════════════════════════════════ -->
+    <section class="section process">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div class="section-badge">How We Work</div>
+          <h2 class="section-title">Our <span class="gradient-text">Process</span></h2>
+          <p class="section-desc">A proven, transparent workflow designed to deliver exceptional results — on time, every time.</p>
+        </div>
+        <div class="process-steps" data-reveal>
+
+          <div class="process-step">
+            <div class="process-num">01</div>
+            <div class="process-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
+            <h3>Discover</h3>
+            <p>We deep-dive into your vision, goals, and users to understand exactly what the product needs to be.</p>
+          </div>
+          <div class="process-connector" aria-hidden="true">
+            <svg width="40" height="12" viewBox="0 0 40 12"><path d="M0 6h32M28 2l6 4-6 4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+          </div>
+          <div class="process-step">
+            <div class="process-num">02</div>
+            <div class="process-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <h3>Design</h3>
+            <p>Wireframes evolve into beautiful, high-fidelity interfaces that align with your brand and delight users.</p>
+          </div>
+          <div class="process-connector" aria-hidden="true">
+            <svg width="40" height="12" viewBox="0 0 40 12"><path d="M0 6h32M28 2l6 4-6 4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+          </div>
+          <div class="process-step">
+            <div class="process-num">03</div>
+            <div class="process-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Develop</h3>
+            <p>Clean, scalable code built in agile sprints with regular demos and client feedback built into the loop.</p>
+          </div>
+          <div class="process-connector" aria-hidden="true">
+            <svg width="40" height="12" viewBox="0 0 40 12"><path d="M0 6h32M28 2l6 4-6 4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+          </div>
+          <div class="process-step">
+            <div class="process-num">04</div>
+            <div class="process-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3>Deliver</h3>
+            <p>We launch, test, and hand over a polished product — with ongoing support to ensure long-term success.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         TESTIMONIALS
+    ═══════════════════════════════════════════════════════════════════ -->
+    <section class="section testimonials">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div class="section-badge">Testimonials</div>
+          <h2 class="section-title">What Clients <span class="gradient-text">Say</span></h2>
+        </div>
+        <div class="testimonials-wrap" data-reveal>
+          <div class="testimonials-viewport">
+            <div class="testimonials-track" id="testimonialsTrack">
+
+              <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-text">"Jin built our e-commerce platform from scratch and the results exceeded every expectation. The attention to detail and technical precision are truly remarkable."</p>
+                <div class="testi-author">
+                  <div class="testi-avatar">SK</div>
+                  <div>
+                    <h4>Sarah Kim</h4>
+                    <p>CEO at LuxeCommerce</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-text">"Our food delivery app went from idea to App Store in just 3 months. The code quality is exceptional and the UI is exactly what we envisioned — and more."</p>
+                <div class="testi-author">
+                  <div class="testi-avatar">MC</div>
+                  <div>
+                    <h4>Marcus Chen</h4>
+                    <p>Founder at QuickBite</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-text">"The brand identity package was transformative. Our startup now has a visual system that commands trust and stands out in a crowded fintech market."</p>
+                <div class="testi-author">
+                  <div class="testi-avatar">AL</div>
+                  <div>
+                    <h4>Aisha Lambert</h4>
+                    <p>CMO at Nexus Finance</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-text">"Working with Jin felt like having a senior developer, designer, and product manager all in one. The HealthPulse dashboard ships faster and performs better than ever."</p>
+                <div class="testi-author">
+                  <div class="testi-avatar">DP</div>
+                  <div>
+                    <h4>David Park</h4>
+                    <p>CTO at HealthPulse</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-btn" id="prevBtn" aria-label="Previous testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            </button>
+            <div class="slider-dots" id="sliderDots"></div>
+            <button class="slider-btn" id="nextBtn" aria-label="Next testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         TEAM
+    ═══════════════════════════════════════════════════════════════════ -->
+    <section id="team" class="section team">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div class="section-badge">Our Team</div>
+          <h2 class="section-title">The <span class="gradient-text">People</span> Behind It</h2>
+          <p class="section-desc">A boutique team of dedicated professionals who care deeply about craft, communication, and results.</p>
+        </div>
+        <div class="team-grid" data-reveal>
+
+          <div class="team-card">
+            <div class="team-avatar-wrap">
+              <img src="images/me.jpg" alt="Jin Henry" class="team-photo" />
+              <div class="team-status-dot"></div>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Jin Henry</h3>
+              <p class="team-role">Lead Developer &amp; Founder</p>
+              <p class="team-bio">Full-stack architect with 7+ years building high-performance web, mobile, and enterprise applications. Expert in React, Node.js, Ruby on Rails, and cloud infrastructure — delivering engineering excellence from concept to launch.</p>
+              <div class="team-skills">
+                <span>React</span><span>Node.js</span><span>Ruby on Rails</span><span>AWS</span><span>Next.js</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar-wrap">
+              <div class="team-avatar team-avatar-teal">PM</div>
+              <div class="team-status-dot"></div>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Project Lead</h3>
+              <p class="team-role">Agency Manager &amp; Strategist</p>
+              <p class="team-bio">Experienced agency manager ensuring every engagement runs on time, on budget, and exceeds client expectations. Specializes in transparent agile delivery, stakeholder communication, and growth strategy for digital products.</p>
+              <div class="team-skills">
+                <span>Agile</span><span>Scrum</span><span>Client Relations</span><span>Roadmapping</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="team-cta" data-reveal>
+          <p class="team-cta-text">We're growing fast. Passionate about great products and great people?</p>
+          <a href="#contact" class="btn btn-primary mag-btn">
+            Join Our Team
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         CONTACT
+    ═══════════════════════════════════════════════════════════════════ -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="contact-glow"></div>
+        <div class="contact-grid">
+
+          <div class="contact-info" data-reveal>
+            <div class="section-badge">Get In Touch</div>
+            <h2 class="section-title">Ready to Build<br /><span class="gradient-text">Something Extraordinary?</span></h2>
+            <p class="body-text">
+              Have a project in mind? Looking to join the team? Whether you're a startup ready
+              to launch or an established brand looking to scale, we'd love to hear from you.
+            </p>
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="ci-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <p class="ci-label">Email</p>
+                  <p class="ci-val">jin.herny0406@gmail.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="ci-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <p class="ci-label">Location</p>
+                  <p class="ci-val">Available Worldwide · Remote</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="ci-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <p class="ci-label">Response Time</p>
+                  <p class="ci-val">Within 24 hours</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="contact-form-wrap" data-reveal>
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input type="text" id="firstName" name="firstName" placeholder="John" required autocomplete="given-name" />
+                  <div class="form-line"></div>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id="lastName" name="lastName" placeholder="Doe" required autocomplete="family-name" />
+                  <div class="form-line"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@company.com" required autocomplete="email" />
+                <div class="form-line"></div>
+              </div>
+              <div class="form-group">
+                <label for="service">Service Interested In</label>
+                <select id="service" name="service">
+                  <option value="">Select a service…</option>
+                  <option>Web Development</option>
+                  <option>Mobile Development</option>
+                  <option>UI / UX Design</option>
+                  <option>Ruby on Rails Development</option>
+                  <option>Brand Identity</option>
+                  <option>E-commerce</option>
+                  <option>Consulting</option>
+                  <option>Collaboration / Joining the Team</option>
+                </select>
+                <div class="form-line"></div>
+              </div>
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us about your project or idea…" required></textarea>
+                <div class="form-line"></div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full mag-btn">
+                <span class="btn-text">Send Message</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+              <div class="form-success" id="formSuccess" hidden>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Message sent! We'll reply within 24 hours.
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">JIN<span class="logo-dot">.</span></div>
+          <p>Engineering world-class digital experiences with a focus on modern architecture, elegant design, and seamless performance.</p>
+
+        </div>
+        <div class="footer-links-grid">
+          <div class="footer-col">
+            <h4>Navigate</h4>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Work</a>
+            <a href="#team">Team</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <a href="#">Web Development</a>
+            <a href="#">Mobile Apps</a>
+            <a href="#">UI/UX Design</a>
+            <a href="#">Brand Identity</a>
+            <a href="#">E-commerce</a>
+          </div>
+          <div class="footer-col">
+            <h4>Connect</h4>
+            <a href="mailto:jin.herny0406@gmail.com">jin.herny0406@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 JIN Studio. All rights reserved. Crafted with passion &amp; precision.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
