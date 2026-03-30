@@ -26,7 +26,26 @@
   <!-- ─── LOADER ─────────────────────────────────────────────────── -->
   <div id="loader" class="loader">
     <div class="loader-inner">
-      <div class="loader-logo">OF<span>.</span></div>
+      <div class="loader-logo">
+        <svg class="logo-hex-icon" width="44" height="50" viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="hexGradL" x1="0" y1="0" x2="40" y2="46" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FF7A2F"/>
+              <stop offset="100%" stop-color="#CC3D00"/>
+            </linearGradient>
+            <filter id="hexGlowL" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="2" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <polygon points="20,2 37.3,11.5 37.3,30.5 20,40 2.7,30.5 2.7,11.5" fill="url(#hexGradL)" filter="url(#hexGlowL)"/>
+          <path d="M20 31 L20 17 M13 23.5 L20 17 L27 23.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="loader-wordmark">
+          <span class="loader-name"><span class="logo-outcome">Outcome</span><span class="logo-forge">Forge</span></span>
+          <span class="loader-tagline">RESULTS. BUILT TO LAST.</span>
+        </span>
+      </div>
       <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
       <p class="loader-sub">Crafting something wonderful</p>
     </div>
@@ -1329,7 +1348,7 @@
                 </div>
                 <div>
                   <p class="ci-label">Email</p>
-                  <p class="ci-val">jin.herny0406@gmail.com</p>
+                  <p class="ci-val">evelynelrod9@gmail.com</p>
                 </div>
               </div>
               <div class="contact-item">
@@ -1460,7 +1479,7 @@
           </div>
           <div class="footer-col">
             <h4>Connect</h4>
-            <a href="mailto:jin.herny0406@gmail.com">jin.herny0406@gmail.com</a>
+            <a href="mailto:evelynelrod9@gmail.com">evelynelrod9@gmail.com</a>
           </div>
         </div>
       </div>
