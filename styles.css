@@ -1,5 +1,5 @@
 /* ════════════════════════════════════════════════════════════════
-   JIN STUDIO — Portfolio Stylesheet
+   OUTCOMEFORGE — Portfolio Stylesheet
    ════════════════════════════════════════════════════════════════ */
 
 /* ─── CUSTOM PROPERTIES ────────────────────────────────────────── */
@@ -892,7 +892,40 @@ h1, h2, h3, h4, h5 {
 }
 
 /* ─── ABOUT ──────────────────────────────────────────────────────── */
-.about { background: var(--bg); }
+.about {
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft radial story-glow + diagonal hatching — "Our Story" feel */
+.about::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 10% 50%, rgba(99,102,241,.08) 0%, transparent 70%),
+    radial-gradient(ellipse 45% 45% at 90% 20%, rgba(168,85,247,.06) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.about::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 22px,
+    rgba(99,102,241,.025) 22px,
+    rgba(99,102,241,.025) 23px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.about .container { position: relative; z-index: 1; }
 
 .about-grid {
   display: grid;
@@ -960,7 +993,40 @@ h1, h2, h3, h4, h5 {
 }
 
 /* ─── SERVICES ───────────────────────────────────────────────────── */
-.services { background: var(--bg-2); }
+.services {
+  background: var(--bg-2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Circuit-board dot-matrix pattern — "What We Do" / tech feel */
+.services::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(99,102,241,.18) 1px, transparent 1px),
+    radial-gradient(circle, rgba(168,85,247,.10) 1px, transparent 1px);
+  background-size: 28px 28px, 56px 56px;
+  background-position: 0 0, 14px 14px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.services::after {
+  content: '';
+  position: absolute;
+  bottom: -120px;
+  right: -120px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99,102,241,.09) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.services .container { position: relative; z-index: 1; }
 
 .services-grid {
   display: grid;
@@ -1124,7 +1190,39 @@ h1, h2, h3, h4, h5 {
 }
 
 /* ─── SKILLS ─────────────────────────────────────────────────────── */
-.skills { background: var(--bg); }
+.skills {
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Horizontal scan-line grid — "Tech Stack" / terminal feel */
+.skills::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(99,102,241,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99,102,241,.045) 1px, transparent 1px);
+  background-size: 42px 42px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.skills::after {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139,92,246,.10) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.skills .container { position: relative; z-index: 1; }
 
 .skills-grid {
   display: grid;
@@ -1303,7 +1401,34 @@ a.pill { text-decoration: none; }
 }
 
 /* ─── PROJECTS ───────────────────────────────────────────────────── */
-.projects { background: var(--bg-2); }
+.projects {
+  background: var(--bg-2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle hexagonal tessellation — gallery / portfolio feel */
+.projects::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse 80% 40% at 50% 0%, rgba(99,102,241,.10) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 50% 100%, rgba(168,85,247,.07) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.projects::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='69'%3E%3Cpath d='M0 34.5 L15 9 L45 9 L60 34.5 L45 60 L15 60 Z' fill='none' stroke='rgba(99%2C102%2C241%2C0.04)' stroke-width='1'/%3E%3Cpath d='M-15 9 L0 -16.5 L30 -16.5 L45 9 L30 34.5 L0 34.5 Z' fill='none' stroke='rgba(99%2C102%2C241%2C0.04)' stroke-width='1'/%3E%3Cpath d='M15 60 L30 34.5 L60 34.5 L75 60 L60 85.5 L30 85.5 Z' fill='none' stroke='rgba(99%2C102%2C241%2C0.04)' stroke-width='1'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+.projects .container { position: relative; z-index: 1; }
 
 .project-filters {
   display: flex;
@@ -1557,7 +1682,43 @@ a.pill { text-decoration: none; }
 }
 
 /* ─── PROCESS ────────────────────────────────────────────────────── */
-.process { background: var(--bg); }
+.process {
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Flow arrows / connector lines — "How We Work" feel */
+.process::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 80px,
+      rgba(99,102,241,.035) 80px,
+      rgba(99,102,241,.035) 81px
+    ),
+    radial-gradient(ellipse 70% 50% at 50% 50%, rgba(99,102,241,.07) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.process::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(99,102,241,.5), rgba(168,85,247,.5), transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.process .container { position: relative; z-index: 1; }
 
 .process-steps {
   display: flex;
@@ -1635,7 +1796,35 @@ a.pill { text-decoration: none; }
 }
 
 /* ─── TESTIMONIALS ───────────────────────────────────────────────── */
-.testimonials { background: var(--bg-2); }
+.testimonials {
+  background: var(--bg-2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft quote-bubble radial glow — trust / client voices feel */
+.testimonials::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 20% 50%, rgba(245,158,11,.06) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 60% at 80% 50%, rgba(99,102,241,.07) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.testimonials::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Ccircle cx='60' cy='60' r='58' fill='none' stroke='rgba(245%2C158%2C11%2C0.03)' stroke-width='1'/%3E%3Ccircle cx='60' cy='60' r='40' fill='none' stroke='rgba(245%2C158%2C11%2C0.025)' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 120px 120px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.testimonials .container { position: relative; z-index: 1; }
 
 .testimonials-wrap { position: relative; max-width: 100%; }
 
@@ -1746,7 +1935,51 @@ a.pill { text-decoration: none; }
 }
 
 /* ─── CONTACT ────────────────────────────────────────────────────── */
-.contact { background: var(--bg); }
+.contact {
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Envelope / signal-wave mesh — "Get In Touch" feel */
+.contact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 30px,
+      rgba(99,102,241,.03) 30px,
+      rgba(99,102,241,.03) 31px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 30px,
+      rgba(99,102,241,.03) 30px,
+      rgba(99,102,241,.03) 31px
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact::after {
+  content: '';
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(99,102,241,.11) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact .container { position: relative; z-index: 1; }
 
 .contact-glow {
   position: absolute;
@@ -2061,7 +2294,41 @@ a.pill { text-decoration: none; }
 }
 
 /* ─── WHY US ─────────────────────────────────────────────────────── */
-.why-us { background: var(--bg); }
+.why-us {
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle check-mark fingerprint pattern — trust / value feel */
+.why-us::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 55% 70% at 100% 50%, rgba(16,185,129,.07) 0%, transparent 65%),
+    radial-gradient(ellipse 45% 55% at 0% 50%, rgba(99,102,241,.06) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.why-us::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      135deg,
+      transparent,
+      transparent 18px,
+      rgba(16,185,129,.02) 18px,
+      rgba(16,185,129,.02) 19px
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.why-us .container { position: relative; z-index: 1; }
 
 .why-grid {
   display: grid;
@@ -2162,7 +2429,35 @@ a.pill { text-decoration: none; }
 }
 
 /* ─── TEAM ───────────────────────────────────────────────────────── */
-.team { background: var(--bg-2); }
+.team {
+  background: var(--bg-2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft bokeh orbs / people spotlight feel */
+.team::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle 340px at 25% 50%, rgba(99,102,241,.09) 0%, transparent 70%),
+    radial-gradient(circle 280px at 75% 50%, rgba(236,72,153,.07) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.team::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Ccircle cx='40' cy='40' r='1.2' fill='rgba(255%2C255%2C255%2C0.04)'/%3E%3C/svg%3E");
+  background-size: 80px 80px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.team .container { position: relative; z-index: 1; }
 
 .team-grid {
   display: grid;
