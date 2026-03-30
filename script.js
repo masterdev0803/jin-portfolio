@@ -147,14 +147,14 @@ function initParticles() {
   }
 
   function buildParticles() {
-    const count = Math.min(Math.floor((W * H) / 14000), 80);
+    const count = Math.min(Math.floor((W * H) / 9000), 120);
     particles = Array.from({ length: count }, () => ({
       x: Math.random() * W,
       y: Math.random() * H,
       vx: (Math.random() - .5) * .4,
       vy: (Math.random() - .5) * .4,
       r: Math.random() * 1.8 + .6,
-      opacity: Math.random() * .5 + .15,
+      opacity: Math.random() * .6 + .2,
     }));
   }
 
@@ -192,7 +192,7 @@ function initParticles() {
       // Draw particle
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(139,92,246,${p.opacity})`;
+      ctx.fillStyle = `rgba(34,211,238,${p.opacity})`;
       ctx.fill();
 
       // Draw connections
@@ -200,12 +200,12 @@ function initParticles() {
         const q = particles[j];
         const ex = p.x - q.x, ey = p.y - q.y;
         const edist = Math.sqrt(ex * ex + ey * ey);
-        if (edist < 130) {
-          const alpha = (1 - edist / 130) * 0.12;
+        if (edist < 160) {
+          const alpha = (1 - edist / 160) * 0.2;
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(q.x, q.y);
-          ctx.strokeStyle = `rgba(99,102,241,${alpha})`;
+          ctx.strokeStyle = `rgba(34,211,238,${alpha})`;
           ctx.lineWidth = .8;
           ctx.stroke();
         }

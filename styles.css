@@ -499,6 +499,7 @@ h1, h2, h3, h4, h5 {
   justify-content: center;
   overflow: hidden;
   padding: 8rem 0 6rem;
+  background: radial-gradient(ellipse 120% 55% at 50% 0%, rgba(10,28,56,0.6) 0%, transparent 65%);
 }
 
 #particleCanvas {
@@ -590,9 +591,29 @@ h1, h2, h3, h4, h5 {
 .hero-title {
   font-size: clamp(2.9rem, 6.5vw, 5.4rem);
   line-height: 1.03;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
   letter-spacing: -.025em;
   font-weight: 900;
+}
+
+.hero-brand-name {
+  font-size: clamp(3.8rem, 9vw, 7.5rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -.03em;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.brand-outcome {
+  color: var(--text);
+  -webkit-text-fill-color: var(--text);
+}
+
+.brand-forge {
+  color: #FF6E1E;
+  -webkit-text-fill-color: #FF6E1E;
+  text-shadow: 0 0 60px rgba(255,110,30,0.22);
 }
 
 .hero-cycle-wrapper {
@@ -621,6 +642,33 @@ h1, h2, h3, h4, h5 {
 }
 
 .hero-desc strong { color: var(--text); }
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+
+.tag-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22d3ee;
+  flex-shrink: 0;
+  box-shadow: 0 0 6px rgba(34,211,238,0.55);
+}
 
 .hero-actions {
   display: flex;
