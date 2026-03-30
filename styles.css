@@ -2848,7 +2848,16 @@ a.pill { text-decoration: none; }
 /* ─── RESPONSIVE ─────────────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .hero-container   { grid-template-columns: 1fr; gap: 4rem; }
-  .hero-visual      { justify-content: center; }
+  .hero-visual      { justify-content: center; order: -1; }
+  .hero-text        { order: 0; }
+  .hero-brand-name  { font-size: clamp(3.2rem, 10vw, 5.6rem); margin-bottom: 1.2rem; }
+  .hero-desc        { max-width: 600px; }
+  .hero-tags        { justify-content: center; }
+  .hero-social-proof{ justify-content: center; text-align: center; }
+  .hero-stats       { justify-content: center; flex-wrap: wrap; gap: 1.5rem; }
+  .visual-wrap      { width: 380px; height: 430px; }
+  .hero-photo-wrap  { width: 290px; height: 370px; }
+  .fc-3, .fc-4      { display: none; }
   .about-grid       { grid-template-columns: 1fr; gap: 3rem; }
   .about-stats-grid { grid-template-columns: 1fr 1fr; }
   .services-grid    { grid-template-columns: 1fr 1fr; }
@@ -2871,17 +2880,24 @@ a.pill { text-decoration: none; }
 
   .section { padding: 5rem 0; }
 
-  .hero-container { text-align: center; }
-  .hero-actions { justify-content: center; }
-  .hero-badge { margin: 0 auto 1.5rem; }
-  .hero-desc { margin-inline: auto; }
-  .hero-stats { justify-content: center; }
+  .hero-container   { text-align: center; }
+  .hero-badge       { margin: 0 auto 1.5rem; }
+  .hero-brand-name  { font-size: clamp(2.6rem, 11vw, 4.2rem); }
+  .hero-desc        { margin-inline: auto; max-width: 100%; }
+  .hero-tags        { justify-content: center; gap: 1rem; }
+  .hero-actions     { justify-content: center; flex-direction: column; align-items: center; }
+  .hero-actions .btn { width: 100%; max-width: 320px; justify-content: center; }
+  .hero-stats       { justify-content: center; gap: 1rem; flex-wrap: wrap; }
+  .hero-stat        { min-width: 70px; }
+  .hero-stat-num    { font-size: 1.8rem; }
+  .hero-stat-suffix { font-size: 1.3rem; }
+  .hero-social-proof{ justify-content: center; text-align: center; }
 
-  .visual-wrap { width: 320px; height: 380px; }
-  .hero-photo-wrap { width: 260px; height: 335px; }
+  .visual-wrap      { width: 320px; height: 380px; }
+  .hero-photo-wrap  { width: 250px; height: 320px; }
   .fc-1 { top: -10px; right: -10px; }
   .fc-2 { bottom: 20px; left: -10px; }
-  .fc-3 { display: none; }
+  .fc-3, .fc-4 { display: none; }
 
   .services-grid { grid-template-columns: 1fr; }
   .services-grid .service-card:last-child:nth-child(3n + 1) { grid-column: auto; max-width: none; }
@@ -2904,14 +2920,39 @@ a.pill { text-decoration: none; }
 }
 
 @media (max-width: 480px) {
-  .hero-title { font-size: 2.6rem; }
-  .section-title { font-size: 2rem; }
-  .visual-wrap { width: 280px; height: 330px; }
-  .hero-photo-wrap { width: 220px; height: 285px; }
-  .about-stats-grid { grid-template-columns: 1fr; }
+  .hero-title        { font-size: 2.6rem; }
+  .hero-brand-name   { font-size: clamp(2rem, 13vw, 3rem); letter-spacing: -.02em; }
+  .hero-desc         { font-size: .95rem; }
+  .hero-tags         { flex-direction: column; align-items: center; gap: .75rem; }
+  .hero-stats        { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+  .hero-stat-num     { font-size: 1.6rem; }
+  .hero-stat-suffix  { font-size: 1.2rem; }
+  .stat-divider      { display: none; }
+  .visual-wrap       { width: 280px; height: 330px; }
+  .hero-photo-wrap   { width: 215px; height: 275px; }
+  .fc-1, .fc-2       { font-size: .8rem; padding: .55rem .75rem; gap: .5rem; }
+  .fc-icon           { font-size: 1.1rem; }
+  .section-title     { font-size: 2rem; }
+  .about-stats-grid  { grid-template-columns: 1fr; }
   .footer-links-grid { grid-template-columns: 1fr; }
-  .hero-stats { flex-direction: column; gap: 1rem; }
-  .stat-divider { display: none; }
+}
+
+/* ─── RESPONSIVE: HERO EXTRA ─────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .hero-brand-name  { font-size: clamp(3.4rem, 8vw, 6.5rem); }
+  .hero-container   { gap: 2.5rem; }
+}
+
+@media (max-width: 360px) {
+  .hero-brand-name  { font-size: clamp(1.8rem, 14vw, 2.6rem); }
+  .hero-badge       { font-size: .62rem; padding: .4rem .85rem; }
+  .hero-desc        { font-size: .88rem; line-height: 1.65; }
+  .hero-actions .btn { max-width: 100%; font-size: .85rem; padding: .75rem 1.25rem; }
+  .hero-stat-num    { font-size: 1.4rem; }
+  .hero-stat-suffix { font-size: 1rem; }
+  .visual-wrap      { width: 240px; height: 290px; }
+  .hero-photo-wrap  { width: 185px; height: 238px; }
+  .fc-1, .fc-2      { display: none; }
 }
 
 /* ─── UTILITY: SELECTION ─────────────────────────────────────────── */
