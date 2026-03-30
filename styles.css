@@ -2666,6 +2666,7 @@ a.pill { text-decoration: none; }
   .about-grid       { grid-template-columns: 1fr; gap: 3rem; }
   .about-stats-grid { grid-template-columns: 1fr 1fr; }
   .services-grid    { grid-template-columns: 1fr 1fr; }
+  .services-grid .service-card:last-child:nth-child(3n + 1) { grid-column: auto; max-width: none; }
   .skills-grid      { grid-template-columns: 1fr; gap: 3rem; }
   .projects-grid    { grid-template-columns: 1fr 1fr; }
   .contact-grid     { grid-template-columns: 1fr; gap: 3rem; }
@@ -2697,6 +2698,7 @@ a.pill { text-decoration: none; }
   .fc-3 { display: none; }
 
   .services-grid { grid-template-columns: 1fr; }
+  .services-grid .service-card:last-child:nth-child(3n + 1) { grid-column: auto; max-width: none; }
   .projects-grid { grid-template-columns: 1fr; }
   .about-stats-grid { grid-template-columns: 1fr 1fr; }
   .footer-links-grid { grid-template-columns: 1fr 1fr; }
