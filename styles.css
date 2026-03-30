@@ -2497,27 +2497,97 @@ a.pill { text-decoration: none; }
 
 .team-card:hover::before { opacity: 1; }
 
-/* ─── Featured card: large background portrait ────────────────── */
-.team-card-featured { overflow: hidden; }
+/* ─── Featured card: cinematic portrait background ──────────── */
+.team-card-featured {
+  overflow: hidden;
+  min-height: 380px;
+  border-color: rgba(99,102,241,.25);
+}
 
+/* Full-bleed portrait */
 .team-card-bg-img {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center top;
-  opacity: .09;
-  filter: grayscale(60%) blur(1px);
-  transform: scale(1.05);
+  opacity: .55;
+  filter: none;
   pointer-events: none;
-  transition: opacity .4s, transform .4s;
+  transition: opacity .5s var(--ease), transform .6s var(--ease);
+  transform: scale(1.04);
   z-index: 0;
 }
 
-.team-card-featured > *:not(.team-card-bg-img) { position: relative; z-index: 1; }
-
 .team-card-featured:hover .team-card-bg-img {
-  opacity: .16;
+  opacity: .7;
   transform: scale(1.08);
+}
+
+/* Dark gradient overlay — bottom-heavy so text stays legible */
+.team-card-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top,
+      rgba(2,4,8,.97)  0%,
+      rgba(2,4,8,.82) 40%,
+      rgba(2,4,8,.35) 75%,
+      rgba(2,4,8,.10) 100%);
+  pointer-events: none;
+  z-index: 1;
+  transition: background .5s;
+}
+
+.team-card-featured:hover .team-card-overlay {
+  background:
+    linear-gradient(to top,
+      rgba(2,4,8,.98)  0%,
+      rgba(2,4,8,.85) 38%,
+      rgba(2,4,8,.25) 70%,
+      transparent     100%);
+}
+
+/* All card children above overlay */
+.team-card-featured > *:not(.team-card-bg-img):not(.team-card-overlay) {
+  position: relative;
+  z-index: 2;
+}
+
+/* Top gradient accent bar animates on hover */
+.team-card-featured::before {
+  background: var(--grad);
+  height: 3px;
+  opacity: 0;
+  transition: opacity .4s;
+}
+
+.team-card-featured:hover::before { opacity: 1; }
+
+/* Subtle glow ring on hover */
+.team-card-featured:hover {
+  border-color: rgba(99,102,241,.5);
+  box-shadow:
+    0 0 0 1px rgba(99,102,241,.18),
+    0 32px 80px rgba(0,0,0,.7),
+    0 0 60px rgba(99,102,241,.12);
+}
+
+/* Push content to bottom for a poster feel */
+.team-card-featured .team-info {
+  margin-top: auto;
+}
+
+.team-card-featured .team-avatar-wrap {
+  margin-bottom: .25rem;
+}
+
+.team-card-featured .team-name {
+  font-size: 1.35rem;
+  text-shadow: 0 2px 12px rgba(0,0,0,.7);
+}
+
+.team-card-featured .team-bio {
+  text-shadow: 0 1px 6px rgba(0,0,0,.5);
 }
 
 .team-avatar-wrap {
