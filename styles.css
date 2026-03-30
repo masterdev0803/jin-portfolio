@@ -2509,8 +2509,8 @@ a.pill { text-decoration: none; }
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center top;
-  opacity: .55;
+  background-position: center 30%;
+  opacity: .75;
   filter: none;
   pointer-events: none;
   transition: opacity .5s var(--ease), transform .6s var(--ease);
@@ -2519,7 +2519,7 @@ a.pill { text-decoration: none; }
 }
 
 .team-card-featured:hover .team-card-bg-img {
-  opacity: .7;
+  opacity: .88;
   transform: scale(1.08);
 }
 
@@ -2529,10 +2529,10 @@ a.pill { text-decoration: none; }
   inset: 0;
   background:
     linear-gradient(to top,
-      rgba(2,4,8,.97)  0%,
-      rgba(2,4,8,.82) 40%,
-      rgba(2,4,8,.35) 75%,
-      rgba(2,4,8,.10) 100%);
+      rgba(2,4,8,.98)  0%,
+      rgba(2,4,8,.90) 35%,
+      rgba(2,4,8,.30) 60%,
+      rgba(2,4,8,.05) 100%);
   pointer-events: none;
   z-index: 1;
   transition: background .5s;
@@ -2542,8 +2542,8 @@ a.pill { text-decoration: none; }
   background:
     linear-gradient(to top,
       rgba(2,4,8,.98)  0%,
-      rgba(2,4,8,.85) 38%,
-      rgba(2,4,8,.25) 70%,
+      rgba(2,4,8,.88) 32%,
+      rgba(2,4,8,.18) 58%,
       transparent     100%);
 }
 
