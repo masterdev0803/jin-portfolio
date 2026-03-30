@@ -42,7 +42,26 @@
   <!-- ─── NAVBAR ─────────────────────────────────────────────────── -->
   <nav id="navbar" class="navbar">
     <div class="nav-container">
-      <a href="#" class="nav-logo">OF<span class="logo-dot">.</span></a>
+      <a href="#" class="nav-logo">
+        <svg class="logo-hex-icon" width="34" height="38" viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="hexGrad" x1="0" y1="0" x2="40" y2="46" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FF7A2F"/>
+              <stop offset="100%" stop-color="#CC3D00"/>
+            </linearGradient>
+            <filter id="hexGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="1.5" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <polygon points="20,2 37.3,11.5 37.3,30.5 20,40 2.7,30.5 2.7,11.5" fill="url(#hexGrad)" filter="url(#hexGlow)"/>
+          <path d="M20 31 L20 17 M13 23.5 L20 17 L27 23.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="logo-wordmark">
+          <span class="logo-name"><span class="logo-outcome">Outcome</span><span class="logo-forge">Forge</span></span>
+          <span class="logo-tagline">RESULTS. BUILT TO LAST.</span>
+        </span>
+      </a>
       <div class="nav-links" id="navLinks">
         <a href="#about" class="nav-link">About</a>
         <a href="#services" class="nav-link">Services</a>
@@ -1398,7 +1417,26 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <div class="footer-logo">OF<span class="logo-dot">.</span></div>
+          <div class="footer-logo">
+            <svg class="logo-hex-icon" width="34" height="38" viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="hexGradF" x1="0" y1="0" x2="40" y2="46" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#FF7A2F"/>
+                  <stop offset="100%" stop-color="#CC3D00"/>
+                </linearGradient>
+                <filter id="hexGlowF" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="1.5" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <polygon points="20,2 37.3,11.5 37.3,30.5 20,40 2.7,30.5 2.7,11.5" fill="url(#hexGradF)" filter="url(#hexGlowF)"/>
+              <path d="M20 31 L20 17 M13 23.5 L20 17 L27 23.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="logo-wordmark">
+              <span class="logo-name"><span class="logo-outcome">Outcome</span><span class="logo-forge">Forge</span></span>
+              <span class="logo-tagline">RESULTS. BUILT TO LAST.</span>
+            </span>
+          </div>
           <p>Engineering world-class digital experiences with a focus on modern architecture, elegant design, and seamless performance.</p>
 
         </div>
