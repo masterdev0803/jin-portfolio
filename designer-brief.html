@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Brief - Spec & Harmony Shopify Store</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f8f8;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            border-bottom: 3px solid #000;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .project-type {
+            display: inline-block;
+            background: #000;
+            color: white;
+            padding: 8px 16px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        h2 {
+            font-size: 26px;
+            font-weight: 600;
+            margin: 50px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 30px 0 15px 0;
+            color: #000;
+        }
+        
+        h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 20px 0 10px 0;
+            color: #000;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #555;
+            font-size: 15px;
+        }
+        
+        ul {
+            margin: 15px 0 15px 25px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 15px;
+        }
+        
+        .highlight-box {
+            background: #f5f5f5;
+            border-left: 4px solid #000;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .info-box {
+            background: #fafafa;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid #eee;
+        }
+        
+        .deliverable-card {
+            background: #fafafa;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 3px solid #000;
+        }
+        
+        .deliverable-card h4 {
+            margin-top: 0;
+            font-size: 17px;
+        }
+        
+        .deliverable-card ul {
+            margin-top: 10px;
+        }
+        
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin: 25px 0;
+        }
+        
+        .req-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-left: 3px solid #666;
+        }
+        
+        .req-card h4 {
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+        
+        .brand-info {
+            background: #fffbf0;
+            border-left: 4px solid #f39c12;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .reference-section {
+            background: #f0f0f0;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .checklist {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .checklist li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+        
+        .checklist li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: #2d6a2d;
+            font-size: 18px;
+        }
+        
+        .timeline-budget {
+            background: #f5f5f5;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .timeline-budget strong {
+            color: #000;
+        }
+        
+        .note-box {
+            background: #fff5f5;
+            border-left: 4px solid #d32f2f;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .note-box p {
+            margin-bottom: 8px;
+        }
+        
+        strong {
+            color: #000;
+            font-weight: 600;
+        }
+        
+        a {
+            color: #000;
+            text-decoration: underline;
+        }
+        
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+            text-align: center;
+            color: #888;
+            font-size: 14px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 40px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            .requirements-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <h1>Design Brief: Spec & Harmony</h1>
+            <p class="subtitle">Logo Design + Shopify Store Design Mockups</p>
+            <span class="project-type">Design Only - No Development</span>
+        </div>
+
+        <!-- PROJECT OVERVIEW -->
+        <h2>Project Overview</h2>
+        <div class="highlight-box">
+            <p>I need a talented designer to create a <strong>professional logo</strong> and complete design mockups for a premium pro-audio e-commerce store. This is a <strong>design-only project</strong> (no development) - I need pixel-perfect mockups that a developer can build directly from.</p>
+        </div>
+
+        <div class="info-box">
+            <p><strong>Store Name:</strong> Spec & Harmony</p>
+            <p><strong>Industry:</strong> High-end pro-audio equipment (microphones, studio monitors, audio interfaces, speakers)</p>
+            <p><strong>Target Audience:</strong> Professional audio engineers, music producers, recording studios</p>
+            <p><strong>Design Goal:</strong> Convince major distributors (Universal Audio, Moog, Neve) that this is a premium, professional retailer</p>
+        </div>
+
+        <div class="highlight-box" style="background: #f0f0f0; border-left: 4px solid #000;">
+            <h3 style="margin-top: 0; margin-bottom: 15px;">Project Scope Summary</h3>
+            <p><strong>12 Major Design Sections Required:</strong></p>
+            <ul style="margin: 10px 0 0 25px;">
+                <li>Logo Design + Brand Identity</li>
+                <li>Header/Navigation (Global Component)</li>
+                <li>Homepage (Most Important - Multiple Sections)</li>
+                <li>Collection Pages (Product Grids + Filters)</li>
+                <li>Product Detail Pages (Critical Conversion Page)</li>
+                <li>About Us Page</li>
+                <li>Contact Page</li>
+                <li>Cart Page</li>
+                <li>Search Results Page</li>
+                <li>Policy Pages Template (4 pages: Privacy, Terms, Shipping, Returns)</li>
+                <li>Footer (Global Component)</li>
+                <li>Style Guide & Design System</li>
+            </ul>
+            <p style="margin-top: 15px; font-weight: 600;">All pages need desktop + mobile versions = Comprehensive full-store design package</p>
+        </div>
+
+        <!-- DELIVERABLES -->
+        <h2>What I Need (Deliverables)</h2>
+
+        <p style="background: #fffbf0; padding: 15px; border-left: 4px solid #f39c12; margin-bottom: 25px;">
+            <strong>Note:</strong> For a premium Shopify store like Spec & Harmony, I need comprehensive design mockups covering all major sections and pages. Each page should include desktop and mobile versions.
+        </p>
+
+        <div class="deliverable-card">
+            <h4>1. Logo Design</h4>
+            <ul>
+                <li>Modern, clean, premium wordmark or logo for "Spec & Harmony"</li>
+                <li>Should work on white backgrounds</li>
+                <li>Must be minimal and sophisticated (Apple/luxury aesthetic)</li>
+                <li>Deliverable formats: SVG, PNG (transparent), JPG</li>
+                <li>Multiple sizes (favicon, header, full-size)</li>
+                <li>Logo usage guidelines (minimum size, clear space, color variations)</li>
+            </ul>
+        </div>
+
+        <div class="deliverable-card">
+            <h4>2. Header / Navigation (Global Component)</h4>
+            <p style="margin-bottom: 10px; font-style: italic; color: #666;">This appears on every page</p>
+            <ul>
+                <li>Logo (positioned left - Apple style)</li>
+                <li>Main menu navigation</li>
+                <li>Search bar/icon</li>
+                <li>Cart icon with counter</li>
+                <li>Mobile menu (hamburger menu design)</li>
+            </ul>
+        </div>
+
+        <div class="deliverable-card">
+            <h4>3. Homepage Design (MOST IMPORTANT PAGE)</h4>
+            <p style="margin-bottom: 10px; font-style: italic; color: #666;">Desktop + Mobile versions</p>
+            <p style="margin-bottom: 10px;"><strong>Required Sections:</strong></p>
+            <ul>
+                <li>Hero banner (featured product or brand message)</li>
+                <li>Featured collections showcase</li>
+                <li>Featured products grid (5-10 curated items)</li>
+                <li>Brand story / mission section</li>
+                <li>"Why choose us" section</li>
+                <li>Distributor-focused section (credibility for Universal Audio, Moog, etc.)</li>
+                <li>Testimonials section (optional but recommended)</li>
+                <li>Newsletter signup</li>
+                <li>Footer (see Section 11)</li>
+            </ul>
+        </div>
+
+        <div class="deliverable-card">
+            <h4>4. Collection Pages</h4>
+            <p style="margin-bottom: 10px; font-style: italic; color: #666;">Desktop + Mobile versions</p>
+            <p style="margin-bottom: 10px;"><strong>Example Collections:</strong> Speakers, Amplifiers, DACs, Microphones, Studio Monitors, Audio Interfaces</p>
+            <p style="margin-bottom: 10px;"><strong>Design Includes:</strong></p>
+            <ul>
+                <li>Product grid layout (cards with subtle shadows - see design rules)</li>
+                <li>Filters sidebar (brand, price, category, product type)</li>
+                <li>Sorting options (price, newest, popularity)</li>
+                <li>Pagination or load more button</li>
+                <li>Collection header/banner</li>
+            </ul>
+        </div>
+
+        <div class="deliverable-card">
+            <h4>5. Product Page (CRITICAL CONVERSION PAGE)</h4>
+            <p style="margin-bottom: 10px; font-style: italic; color: #666;">Desktop + Mobile versions - This is where sales happen</p>
+            <p style="margin-bottom: 10px;"><strong>Required Sections:</strong></p>
+            <ul>
+                <li>Product image gallery (large images, zoom functionality)</li>
+                <li>Product title</li>
+                <li>Price display</li>
+                <li>Add to Cart button (prominent, clear CTA)</li>
+                <li>Product description (rich text with formatting)</li>
+                <li>Technical specifications table</li>
+                <li>Shipping information</li>
+                <li>Returns information</li>
+                <li>Related products carousel</li>
+            </ul>
+        </div>
+
+        <div class="deliverable-card">
+            <h4>6. About Us Page</h4>
+            <p style="margin-bottom: 10px; font-style: italic; color: #666;">Desktop + Mobile versions</p>
+            <ul>
+                <li>Brand story section</li>
+                <li>Mission statement</li>
+                <li>Company values</li>
+                <li>Distributor relationships (important for credibility)</li>
+                <li>Team section (optional)</li>
+            </ul>
+        </div>
+
+        <div class="deliverable-card">
+            <h4>7. Contact Page</h4>
+            <p style="margin-bottom: 10px; font-style: italic; color: #666;">Desktop + Mobile versions</p>
+            <ul>
+                <li>Contact form (name, email, message)</li>
+                <li>Email address display</li>
+                <li>Business information (location, hours if applicable)</li>
+                <li>Map integration area (optional)</li>
+            </ul>
+        </div>
+
+        <div class="deliverable-card">
+            <h4>8. Cart Page</h4>
+            <p style="margin-bottom: 10px; font-style: italic; color: #666;">Desktop + Mobile versions</p>
+            <ul>
+                <li>Cart items list with product images</li>
+                <li>Quantity update controls (+/- buttons)</li>
+                <li>Remove item option</li>
+                <li>Order summary (subtotal, shipping, tax, total)</li>
+                <li>Checkout button (prominent CTA)</li>
+                <li>Continue shopping link</li>
+                <li>Empty cart state design</li>
+            </ul>
+        </div>
+
+        <div class="deliverable-card">
+            <h4>9. Search Results Page</h4>
+            <p style="margin-bottom: 10px; font-style: italic; color: #666;">Desktop + Mobile versions</p>
+            <ul>
+                <li>Product search results grid</li>
+                <li>Search query display ("Results for: [query]")</li>
+                <li>Empty state design ("No results found" with suggestions)</li>
+                <li>Filter/sort options</li>
+            </ul>
+        </div>
+
+        <div class="deliverable-card">
+            <h4>10. Policy Pages (4 Required Pages)</h4>
+            <p style="margin-bottom: 10px; font-style: italic; color: #666;">Desktop + Mobile versions - Simple text layout template</p>
+            <ul>
+                <li>Privacy Policy</li>
+                <li>Terms of Service</li>
+                <li>Shipping Policy</li>
+                <li>Return & Refund Policy</li>
+            </ul>
+            <p style="margin-top: 10px; font-style: italic; color: #666; font-size: 14px;">
+                Note: These can share the same design template (simple text page with proper typography and spacing)
+            </p>
+        </div>
+
+        <div class="deliverable-card">
+            <h4>11. Footer (Global Component)</h4>
+            <p style="margin-bottom: 10px; font-style: italic; color: #666;">This appears on every page</p>
+            <ul>
+                <li>About Us link</li>
+                <li>Contact link</li>
+                <li>Policy links (Privacy, Terms, Shipping, Returns)</li>
+                <li>Social media icons/links</li>
+                <li>Newsletter signup (or link to it)</li>
+                <li>Copyright notice</li>
+                <li>Payment method icons (optional)</li>
+            </ul>
+        </div>
+
+        <div class="deliverable-card">
+            <h4>12. Style Guide & Design System</h4>
+            <ul>
+                <li>Typography specifications (fonts, sizes, weights, line heights)</li>
+                <li>Color palette with hex codes</li>
+                <li>Spacing/padding system (grid/spacing scale)</li>
+                <li>Component library (buttons, cards, inputs, forms)</li>
+                <li>Icon set (if custom icons are used)</li>
+                <li>Logo usage guidelines</li>
+            </ul>
+        </div>
+
+        <!-- BRAND IDENTITY -->
+        <h2>Design Requirements (Client Specifications)</h2>
+
+        <div class="brand-info">
+            <h3 style="margin-top: 0;">Brand Identity</h3>
+            <ul>
+                <li><strong>Business Name:</strong> Spec & Harmony</li>
+                <li><strong>Logo:</strong> NEEDS TO BE DESIGNED - modern, minimal, premium aesthetic</li>
+                <li><strong>Brand Colors:</strong> Crisp white background ONLY - products must stand out against pure white</li>
+                <li><strong>Typography:</strong> Modern, clean, premium (use Apple as reference)</li>
+                <li><strong>Overall Aesthetic:</strong> Not cluttered, easy to look at, minimal and breathable</li>
+            </ul>
+        </div>
+
+        <!-- SPECIFIC DESIGN RULES -->
+        <h3>Specific Design Rules</h3>
+
+        <div class="requirements-grid">
+            <div class="req-card">
+                <h4>Navigation/Menu Bar</h4>
+                <ul>
+                    <li>Logo positioned on the <strong>left side</strong> of the menu bar (Apple style)</li>
+                    <li>Clean, minimal menu bar design</li>
+                    <li>Reference: Apple.com navigation placement and style</li>
+                </ul>
+            </div>
+
+            <div class="req-card">
+                <h4>Homepage Product Cards</h4>
+                <ul>
+                    <li>Products displayed with <strong>balanced composition</strong> - both the product AND the background image should stand out</li>
+                    <li>Cards should have a <strong>subtle shadow</strong> to create depth (make them look "forward and alive")</li>
+                    <li>Clean, premium look</li>
+                </ul>
+            </div>
+
+            <div class="req-card">
+                <h4>Collection Page Product Cards</h4>
+                <ul>
+                    <li>Show <strong>ONLY the product</strong> (no background, no context)</li>
+                    <li><strong>No floating effects</strong> or unnecessary animations</li>
+                    <li>Simple, clean product presentation</li>
+                    <li>Maintain shadow for depth/dimension</li>
+                </ul>
+            </div>
+
+            <div class="req-card">
+                <h4>Product Images</h4>
+                <ul>
+                    <li>All products on white/transparent backgrounds</li>
+                    <li>High-quality, professional presentation</li>
+                    <li>Clean product photography style</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="req-card" style="margin-top: 20px;">
+            <h4>Overall Layout Requirements</h4>
+            <ul>
+                <li>Generous white space (like Apple.com)</li>
+                <li>Not cluttered - "essentials only" feel on homepage</li>
+                <li>Well-organized catalog structure underneath</li>
+                <li>Aligned elements, premium typography</li>
+                <li>Mobile-first responsive design</li>
+            </ul>
+        </div>
+
+        <!-- DESIGN REFERENCES -->
+        <h2>Design References</h2>
+
+        <div class="reference-section">
+            <h4>Primary Reference: Apple.com</h4>
+            <ul>
+                <li>Minimalism and white space</li>
+                <li>Clean typography</li>
+                <li>Menu bar placement and logo positioning</li>
+                <li>Product presentation style</li>
+            </ul>
+
+            <h4 style="margin-top: 20px;">Secondary Reference: Moogmusic.com</h4>
+            <ul>
+                <li>Premium audio equipment positioning</li>
+                <li>Professional product photography</li>
+                <li><strong>BUT use white background instead of dark</strong></li>
+            </ul>
+
+            <h4 style="margin-top: 20px;">Aesthetic Goals:</h4>
+            <ul>
+                <li>Luxury but approachable</li>
+                <li>Professional but not corporate</li>
+                <li>Modern but timeless</li>
+                <li>Clean but not sterile</li>
+            </ul>
+        </div>
+
+        <!-- FILE DELIVERABLES -->
+        <h2>File Deliverables Required</h2>
+        
+        <p>Please provide mockups in <strong>Figma</strong> (preferred) or <strong>Adobe XD/Photoshop</strong>:</p>
+
+        <ul class="checklist">
+            <li>Logo files (SVG, PNG transparent, JPG, plus favicon)</li>
+            <li>Header/Navigation design (desktop + mobile)</li>
+            <li>Homepage mockup with all sections (desktop + mobile)</li>
+            <li>Collection page mockup (desktop + mobile)</li>
+            <li>Product page mockup with all sections (desktop + mobile)</li>
+            <li>About Us page mockup (desktop + mobile)</li>
+            <li>Contact page mockup (desktop + mobile)</li>
+            <li>Cart page mockup (desktop + mobile)</li>
+            <li>Search results page mockup (desktop + mobile)</li>
+            <li>Policy page template (desktop + mobile) - applies to all 4 policy pages</li>
+            <li>Footer design (desktop + mobile)</li>
+            <li>Style guide & design system document (typography, colors, spacing, components, logo usage)</li>
+            <li>Exportable assets (icons, buttons, components)</li>
+        </ul>
+
+        <p style="margin-top: 15px;"><strong>Total Pages to Design:</strong> 10 unique pages + Header + Footer (12 deliverable sections)</p>
+        <p style="margin-top: 10px;"><strong>Important:</strong> All files should be organized, labeled, and <strong>developer-ready</strong> (a Shopify developer should be able to build directly from your designs).</p>
+
+        <!-- PRODUCT CATEGORIES -->
+        <h2>Product Categories to Design For</h2>
+
+        <p>You'll design for these main product categories (use placeholder images if needed):</p>
+        <ol style="margin-left: 25px;">
+            <li><strong>Microphones</strong> (large condenser mics, vintage-style, studio microphones)</li>
+            <li><strong>Studio Monitors</strong> (professional audio monitors, near-field monitors)</li>
+            <li><strong>Speakers</strong> (high-end speakers, studio speakers)</li>
+            <li><strong>Audio Interfaces</strong> (recording interfaces, rack-mounted gear)</li>
+            <li><strong>Amplifiers</strong> (headphone amps, power amplifiers)</li>
+            <li><strong>DACs</strong> (digital-to-analog converters, high-end audio DACs)</li>
+            <li><strong>Headphones</strong> (professional studio headphones - optional/future)</li>
+        </ol>
+        <p style="margin-top: 15px; font-style: italic; color: #666; font-size: 14px;">
+            Note: Focus on the first 4-6 categories for initial mockups. These represent the core pro-audio equipment lineup.
+        </p>
+
+        <!-- TIMELINE & BUDGET -->
+        <h2>Timeline & Budget</h2>
+
+        <div class="timeline-budget">
+            <p><strong>Timeline:</strong> 4 days (URGENT - logo design + comprehensive store mockups)</p>
+            <p><strong>Scope:</strong> 12 major sections (Logo + Header + Homepage + 7 page types + Footer + Style Guide)</p>
+            <p><strong>Revisions:</strong> 2 rounds of design revisions included (logo + all mockups)</p>
+            <p><strong>Budget:</strong> $[YOUR BUDGET] - Please quote your price for this comprehensive scope</p>
+            <p style="margin-top: 10px; font-size: 14px; color: #666;"><em>Note: This is a full Shopify store design package with all essential pages. Fast turnaround required - please only apply if you can meet the 3-day deadline.</em></p>
+        </div>
+
+        <!-- WHAT I'LL PROVIDE -->
+        <h2>What I'll Provide</h2>
+
+        <ul>
+            <li>Business name: <strong>Spec & Harmony</strong></li>
+            <li>Product image examples (for reference/mockup use)</li>
+            <li>This detailed brief with all design requirements</li>
+            <li>Quick feedback during design revisions</li>
+            <li>Direction/feedback on logo concepts</li>
+        </ul>
+
+        <!-- REQUIREMENTS FOR APPLICANTS -->
+        <h2>Requirements for Applicants</h2>
+
+        <ul class="checklist">
+            <li><strong>Must have:</strong> Logo design portfolio (modern, minimal, luxury brands)</li>
+            <li><strong>Must have:</strong> Shopify design experience (show me your Shopify portfolio)</li>
+            <li><strong>Must have:</strong> E-commerce/product page design experience</li>
+            <li><strong>Must have:</strong> Clean, minimal design aesthetic (Apple/luxury style)</li>
+            <li><strong>Bonus:</strong> Experience with audio/music industry brands</li>
+            <li><strong>Bonus:</strong> Figma expertise</li>
+        </ul>
+
+        <h3>When Applying, Please:</h3>
+        <ol style="margin-left: 25px;">
+            <li>Share 2-3 examples of <strong>logos you've designed</strong> (minimal/luxury style preferred)</li>
+            <li>Share 2-3 examples of <strong>Shopify store designs</strong> you've created (minimal/luxury aesthetic preferred)</li>
+            <li>Confirm you can deliver logo + desktop + mobile mockups for all 3 pages</li>
+            <li>Quote your price and timeline for the complete package</li>
+            <li>Ask any clarifying questions</li>
+        </ol>
+
+        <!-- IMPORTANT NOTES -->
+        <h2>Important Notes</h2>
+
+        <div class="note-box">
+            <p>✓ This is <strong>design only</strong> - no Shopify development required</p>
+            <p>✓ Logo must be <strong>scalable, professional, and versatile</strong> (works at all sizes)</p>
+            <p>✓ Designs must be <strong>pixel-perfect and developer-ready</strong></p>
+            <p>✓ All mockups must be <strong>fully responsive</strong> (desktop + mobile)</p>
+            <p>✓ I need <strong>source files</strong> (Figma/XD/PSD) along with exported PNG/JPG/SVG files</p>
+            <p style="margin-bottom: 0;">✓ Final designs will be used to convince distributors - <strong>quality is critical</strong></p>
+        </div>
+
+        <!-- QUESTIONS -->
+        <h2>Questions?</h2>
+
+        <div class="highlight-box">
+            <p>If anything is unclear about the design requirements, logo placement, product card styling, or overall aesthetic - please ask before submitting your proposal. I want to make sure we're aligned on the vision.</p>
+            <p style="margin-bottom: 0; margin-top: 15px;"><strong>Looking forward to working with a talented designer who can bring this luxury pro-audio store to life!</strong></p>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <p>Design Brief - Spec & Harmony Pro-Audio E-commerce Store</p>
+            <p style="margin-top: 5px;">Logo Design + Shopify Store Mockups (Apple/Luxury Aesthetic)</p>
+        </div>
+
+    </div>
+</body>
+</html>
